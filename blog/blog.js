@@ -10,7 +10,8 @@ class BlogController {
         let article = parts[parts.length-1].split('.')
         article = article[0]
         if(!article) article = 'error'
-        this.loadPost(`/blog/posts/${article}.md`, () => {
+        const rootPath = location.hostname == 'localhost' ? '' : 'https://raw.githubusercontent.com/cjortegon/vecci.co/master'
+        this.loadPost(`${rootPath}/blog/posts/${article}.md`, () => {
             this.fixAll()
         })
     }
@@ -121,7 +122,6 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 ];
 function formatedDate(date) {
     const d = new Date(date)
-    console.log('valid', `${d.getTime()}`)
     if(`${d.getTime()}` == 'NaN') return ''
     return `${monthNames[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
 }
