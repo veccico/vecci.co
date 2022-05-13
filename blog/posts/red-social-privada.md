@@ -2,7 +2,7 @@
 
 Vecci es la primera red social de uso exclusivo para la comunidad de tu conjunto residencial. No más carteleras que nadie ve y que pocos se interesan en usar, en el mundo digital que vivimos deberíamos usar nuestro smartphone para hablar con nuestros vecinos.
 
-![30;300;c](/assets/images/blog/private_social_network.jpg)
+![;300;c](/assets/images/blog/private_social_network.jpg)
 
 ¿Estás en uno de esos <strong>grupos de whatsapp</strong> de tu conjunto donde se habla de todo y de nada a la vez? Eso es porque los chats no fueron diseñados para funcionar como Muro o NewsFeed. Vecci permite que las publicaciones no se conviertan en una cadena de chismes y respuestas, sino que le da valor a las publicaciones importantes.
 

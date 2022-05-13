@@ -10,7 +10,8 @@ class BlogController {
         let article = parts[parts.length-1].split('.')
         article = article[0]
         if(!article) article = 'error'
-        const rootPath = location.hostname == 'localhost' ? '' : 'https://raw.githubusercontent.com/cjortegon/vecci.co/master'
+        let rootPath = ''
+        rootPath = location.hostname == 'localhost' ? '' : 'https://raw.githubusercontent.com/cjortegon/vecci.co/master'
         this.loadPost(`${rootPath}/blog/posts/${article}.md`, () => {
             this.fixAll()
         })
