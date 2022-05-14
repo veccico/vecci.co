@@ -11,11 +11,27 @@ function invalidate() {
                 const parts = f.split('.')
                 return parts.length == 2 && parts[1] == 'md' ? checkBlogPost(f) : null
             }).filter(f => f)
-            createBlogHome(posts)
-            const first = posts.pop()
+
+            let postsWithInfo = filterBlogPosts(posts)
+            const postsWithMeta = posts.map(p => {
+                try {
+                    const pp = p.split('/').pop().split('.')[0]
+                    return {
+                        page: p,
+                        meta: postsWithInfo.filter(p => p.link == pp).pop()
+                    }
+                } catch {}
+                return {
+                    page: p,
+                    meta: null,
+                }
+            })
+
+            createBlogHome(postsWithInfo)
+            const first = postsWithMeta.pop()
             if(first) {
                 const original = await readOriginal()
-                writeFile(posts, first, original)
+                writeFile(postsWithMeta, first, original)
             }
         })
     })
@@ -32,7 +48,7 @@ function checkBlogPost(path) {
 }
 
 function writeFile(files, file, original) {
-    fs.writeFile(file, original, () => {
+    fs.writeFile(file.page, original, () => {
         if(files.length > 0) {
             const next = files.pop()
             writeFile(files, next, original)
@@ -46,7 +62,7 @@ function createBlogHome(posts) {
     try { fs.unlinkSync(homePath) } catch {}
     fs.writeFile(homePath, JSON.stringify({
         ...JSON.parse(jsonHome),
-        posts: filterBlogPosts(posts),
+        posts,
     }), () => {})
 }
 
@@ -56,23 +72,28 @@ function filterBlogPosts(posts) {
         return fs.existsSync(`${rootPath}/posts/${filename}.md`) ? formatPost(filename, p) : null
     })
     .filter(f => f)
-    .map(p => {
-        return {topic: 'Actualidad', ...p}
-    })
 }
 function formatPost(link) {
     const text = fs.readFileSync(`${rootPath}/posts/${link}.md`, 'utf-8') || ''
     if(text.includes(`<meta name="date"`)) {
-        // const html = marked(text).split('\n')
         const lines = text.split('\n')
         return {
-            topic: 'Actualidad',
+            topic: findTopic(lines),
             link,
             title: findTitle(lines),
             image: findImage(lines),
         }
     }
     return null
+}
+function findTopic(html) {
+    const prefix = '<meta name="topic" content='
+    const meta = html.filter(l => l.startsWith(prefix)).pop()
+    if(meta) {
+        let matches = meta.slice(prefix.length, meta.length).match(/"([^"]+)"/)
+        if(matches.length > 1) return matches[1]
+    }
+    return "Actualidad"
 }
 function findTitle(html) {
     const h1s = html.filter(l => l.startsWith('# '))
