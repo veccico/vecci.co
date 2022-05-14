@@ -48,12 +48,31 @@ function checkBlogPost(path) {
 }
 
 function writeFile(files, file, original) {
-    fs.writeFile(file.page, original, () => {
+    fs.writeFile(file.page, alterPageWithMetadata(original, file.meta), () => {
         if(files.length > 0) {
             const next = files.pop()
             writeFile(files, next, original)
         }
     })
+}
+const defaultOpenGraph = {
+    title: "Vecci - La App para tu Conjunto Residencial",
+    image: "/assets/images/get_vecci.png",
+    site_name: "Vecci",
+    type: "website",
+    description: "Cambia la vieja cartelera por una red social privada. No más correspondencia perdida. Olvida las autorizaciones en papel.",
+    url: "vecci.co",
+}
+function alterPageWithMetadata(html, meta) {
+    try {
+        const metadata = meta || defaultOpenGraph
+        html = html.replace('{og:title}', metadata.title || defaultOpenGraph.title)
+        html = html.replace('{og:image}', metadata.image || defaultOpenGraph.image)
+        html = html.replace('{og:description}', metadata.description || defaultOpenGraph.description)
+        return html
+    } catch {
+        return html || ''
+    }
 }
 
 function createBlogHome(posts) {
