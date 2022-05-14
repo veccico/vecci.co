@@ -12,7 +12,8 @@ class BlogController {
         if(!article) article = 'error'
         let rootPath = ''
         rootPath = location.hostname == 'localhost' ? '' : 'https://raw.githubusercontent.com/cjortegon/vecci.co/master'
-        this.loadPost(`${rootPath}/blog/posts/${article}.md`, () => {
+        this.loadPost(`${rootPath}/blog/posts/${article}.md`, (md) => {
+            document.querySelector('#content').innerHTML = marked(md);
             this.fixAll()
         })
     }
@@ -36,8 +37,7 @@ class BlogController {
         fetch(mdFilePath /*, options */)
         .then((response) => response.text())
         .then((md) => {
-            document.querySelector('#content').innerHTML = marked(md);
-            callback();
+            callback(md);
         })
         .catch((error) => {
             console.warn(error);
