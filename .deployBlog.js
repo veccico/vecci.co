@@ -76,6 +76,11 @@ function alterPageWithMetadata(html, meta) {
 }
 
 function createBlogHome(posts) {
+    try {
+        posts = posts.sort((a, b) => {
+            return new Date(b.date).getTime() - new Date(a.date).getTime();
+        })
+    } catch {}
     const jsonHome = fs.readFileSync(`${rootPath}/posts/home.json`, 'utf8')
     const homePath = `${rootPath}/posts/posts.json`
     try { fs.unlinkSync(homePath) } catch {}
@@ -98,6 +103,7 @@ function formatPost(link) {
         const lines = text.split('\n')
         return {
             topic: findTopic(lines),
+            date: findDate(lines),
             link,
             title: findTitle(lines),
             image: findImage(lines),
@@ -114,6 +120,16 @@ function findTopic(html) {
         if(matches.length > 1) return matches[1]
     }
     return "Actualidad"
+}
+function findDate(html) {
+    const prefix = '<meta name="date" content='
+    const meta = html.filter(l => l.startsWith(prefix)).pop()
+    if(meta) {
+        let matches = meta.slice(prefix.length, meta.length).match(/"([^"]+)"/)
+        if(matches.length > 1) return matches[1]
+    }
+    const now = Date()
+    return `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`
 }
 function findTitle(html) {
     const h1s = html.filter(l => l.startsWith('# '))
