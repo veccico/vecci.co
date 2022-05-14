@@ -2,6 +2,7 @@
 <meta name="author" content="Camilo Ortegón" />
 <meta name="pp" content="https://avatars.githubusercontent.com/u/6712411?v=4" />
 <meta name="language" content="es" />
+<meta name="topic" content="Lifestyle" />
 
 # 5 razones para amar Vecci
 
