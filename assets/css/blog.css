@@ -101,6 +101,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     color: #444;
     line-height: 0.9em;
+    margin-bottom: 10px;
 }
 
 a {
@@ -241,12 +242,19 @@ a {
 }
 @media only screen and (max-device-width: 600px)  {
     .profile .pp-container {
-        width: 100px;
+        width: 60px;
+        height: 60px;
         margin-top: 5px;
         margin-right: 10px;
     }
+    .profile .metadata {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
     .profile .metadata span {
-        font-size: 1.9em;
+        font-size: 1.4em;
+        line-height: 0.9em;
     }
 }
 
