@@ -5,6 +5,26 @@ class BlogController {
         this.URL_BASE = 'https://gq3ykajn8g.execute-api.us-east-1.amazonaws.com/prod/client'
     }
 
+    loadBlog = () => {
+        let rootPath = ''
+        this.loadPost(`${rootPath}/blog/posts/posts.json`, async (jsonString) => {
+            const json = JSON.parse(jsonString)
+            document.querySelector('#content').innerHTML = `
+                ${marked(json.md_start)}
+                <br />
+                ${await (new BlogHomeRender()).renderNews(json.posts.map(p => {
+                    return {
+                        ...p,
+                        link: `/blog/${p.link}.html`
+                    }
+                }))}
+                <br />
+                ${marked(json.md_end)}
+            `
+            this.fixAll()
+        })
+    }
+
     loadArticle = () => {
         const parts = location.pathname.split('/')
         let article = parts[parts.length-1].split('.')
@@ -44,6 +64,103 @@ class BlogController {
         });
     }
 
+}
+
+class BlogHomeRender {
+
+    constructor() {}
+
+    renderNews = async (posts) => {
+        return `<div class="hide-in-small">
+            ${await this.postToPairMd(posts)
+            .then(posts => this.divideInColumns(posts, 2))
+            .then(posts => this.postToCardsStyle2(posts))}
+        </div>
+        <div class="hide-in-large">
+            ${await this.postToMd(posts)
+            .then(posts => this.divideInColumns(posts, 2))
+            .then(posts => this.postToCardsStyle1(posts))}
+        </div>`
+    }
+
+    postToPairMd = (posts) => {
+        return new Promise(resolve => {
+            resolve(posts.map(p => {
+                return {
+                    link: p.link,
+                    content: [
+    `[![100;;l](${p.image})](${p.link})`,
+    `### ${p.topic}\n## ${p.title}`
+                    ]
+                }
+            }))
+        })
+    }
+    divideInColumns(list, size) {
+        return new Promise(resolve => {
+            resolve(list.reduce(function(result, value, index, array) {
+                if (index % size === 0)
+                  result.push(array.slice(index, index + size));
+                return result;
+              }, []))
+        })
+    }
+    postToMd = (posts) => {
+        return new Promise(resolve => {
+            resolve(posts.map(p => {
+                return {
+                    link: p.link,
+                    content: `[![100;;l](${p.image})](${p.link})\n### ${p.topic}\n## ${p.title}`
+                }
+            }))
+        })
+    }
+    postToPairMd = (posts) => {
+        return new Promise(resolve => {
+            resolve(posts.map(p => {
+                return {
+                    link: p.link,
+                    content: [
+    `[![100;;l](${p.image})](${p.link})`,
+    `### ${p.topic}\n## ${p.title}`
+                    ]
+                }
+            }))
+        })
+    }
+
+    /* For small devices */
+    postToCardsStyle1(grouped) {
+        return new Promise(resolve => {
+            resolve(`<table>
+                ${grouped.map(r => {
+                    return `<tr>
+                        ${r.map(p => `<td class="news-card">
+                            <a href="${p.link}">${marked(p.content)}</a>
+                        </td>`).join('')}
+                    </tr>`
+                }).join('\n')}
+            </table>`)
+        })
+    }
+    /* For large devices */
+    postToCardsStyle2 = (grouped) => {
+        return new Promise(resolve => {
+            resolve(`<table>
+                ${grouped.map(r => {
+                    return `<tr>
+                        ${r.map(p => `<td class="news-card">
+                            <table><tr>
+                                ${p.content.map(item => `<td style="width: 40%; padding-right: 1vw;">
+                                    ${`<a href="${p.link}">${marked(item)}</a>`}
+                                </td>`).join('')}
+                            </tr></table>
+                        </td>`).join('')}
+                    </tr>`
+                }).join('\n')}
+            </table>`)
+        })
+    }
 }
 
 function findMetadata() {
