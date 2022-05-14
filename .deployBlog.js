@@ -1,4 +1,5 @@
 var fs = require('fs')
+const marked = require('./assets/js/marked.min.js')
 
 const reset = true
 const rootPath = './web/blog'
@@ -10,6 +11,7 @@ function invalidate() {
                 const parts = f.split('.')
                 return parts.length == 2 && parts[1] == 'md' ? checkBlogPost(f) : null
             }).filter(f => f)
+            createBlogHome(posts)
             const first = posts.pop()
             if(first) {
                 const original = await readOriginal()
@@ -36,6 +38,54 @@ function writeFile(files, file, original) {
             writeFile(files, next, original)
         }
     })
+}
+
+function createBlogHome(posts) {
+    const jsonHome = fs.readFileSync(`${rootPath}/posts/home.json`, 'utf8')
+    const homePath = `${rootPath}/posts/posts.json`
+    try { fs.unlinkSync(homePath) } catch {}
+    fs.writeFile(homePath, JSON.stringify({
+        ...JSON.parse(jsonHome),
+        posts: filterBlogPosts(posts),
+    }), () => {})
+}
+
+function filterBlogPosts(posts) {
+    return posts.map(p => {
+        const filename = p.split('\/').pop().split('.')[0]
+        return fs.existsSync(`${rootPath}/posts/${filename}.md`) ? formatPost(filename, p) : null
+    })
+    .filter(f => f)
+    .map(p => {
+        return {topic: 'Actualidad', ...p}
+    })
+}
+function formatPost(link) {
+    const text = fs.readFileSync(`${rootPath}/posts/${link}.md`, 'utf-8') || ''
+    if(text.includes(`<meta name="date"`)) {
+        // const html = marked(text).split('\n')
+        const lines = text.split('\n')
+        return {
+            topic: 'Actualidad',
+            link,
+            title: findTitle(lines),
+            image: findImage(lines),
+        }
+    }
+    return null
+}
+function findTitle(html) {
+    const h1s = html.filter(l => l.startsWith('# '))
+    return h1s.length > 0 ? h1s[0].slice(2, 50) : '(Sin título)'
+}
+function findImage(html) {
+    const imgs = html.filter(l => l.startsWith('![') && l.includes('('))
+    if(imgs.length > 0) {
+        const img = imgs[0]
+        const index = img.indexOf('(')+1
+        return img.slice(index, img.length-1)
+    }
+    return ''
 }
 
 async function readOriginal() {
