@@ -101,7 +101,9 @@ function fixLinks() {
     var elms = document.querySelectorAll('a');
     for(var i = 0; i < elms.length; i++) {
         if(!elms[i].classList.contains('same-page'))
-            elms[i].target = '_blank'
+            if(!elms[i].classList.contains('direct-link')) {
+                elms[i].target = '_blank'
+            }
     }
 }
 
