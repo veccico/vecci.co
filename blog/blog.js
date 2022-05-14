@@ -57,6 +57,7 @@ function findMetadata() {
         switch(elms[i].name) {
             case 'date': author.date = elms[i].content; break;
             case 'author': author.name = elms[i].content; break;
+            case 'pp': author.img = elms[i].content; break;
         }
     }
     return author
@@ -133,9 +134,9 @@ function insertAuthor(author) {
     let node = document.getElementById('title');
     if(node != null)
         node.insertAdjacentHTML('afterend', `<div class="profile">
-            <!--<div class="pp-container">
+            ${author.img ? `<div class="pp-container">
                 <img src="${author.img}" />
-            </div>-->
+            </div>` : ''}
             <div class="metadata">
                 <span class="author">${author.name}</span>
                 <span class="date">${formatedDate(author.date)}</span>

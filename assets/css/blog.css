@@ -206,7 +206,7 @@ a {
 .profile {
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 .profile img {
@@ -232,6 +232,8 @@ a {
 @media only screen and (min-device-width: 600px)  {
     .profile .pp-container {
         width: 50px;
+        margin-top: 5px;
+        margin-right: 10px;
     }
     .profile .metadata span {
         font-size: 1em;
@@ -240,6 +242,8 @@ a {
 @media only screen and (max-device-width: 600px)  {
     .profile .pp-container {
         width: 100px;
+        margin-top: 5px;
+        margin-right: 10px;
     }
     .profile .metadata span {
         font-size: 1.9em;
