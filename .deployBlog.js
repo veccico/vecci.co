@@ -101,6 +101,7 @@ function formatPost(link) {
             link,
             title: findTitle(lines),
             image: findImage(lines),
+            description: findDescription(text),
         }
     }
     return null
@@ -126,6 +127,14 @@ function findImage(html) {
         return img.slice(index, img.length-1)
     }
     return ''
+}
+function findDescription(md) {
+    const maxLength = 140
+    return marked(md).split('\n').filter(l => l.startsWith('<p>') && !l.includes('<img'))
+    .map(h => {
+        let max = h.length - 4
+        return h.slice(3, Math.min(max, maxLength))+ (max > maxLength ? '...' : '')
+    })[0]
 }
 
 async function readOriginal() {
