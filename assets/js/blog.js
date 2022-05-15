@@ -26,8 +26,10 @@ class BlogController {
     }
 
     loadArticle = () => {
-        const parts = location.pathname.split('/')
+        const {pathname} = location
+        const parts = pathname.split('/')
         let article = parts[parts.length-1].split('.')
+        if(article.length == 1) location.replace(pathname+'.html')
         article = article[0]
         if(!article) article = 'error'
         let rootPath = ''
