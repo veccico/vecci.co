@@ -56,7 +56,7 @@ class BlogController {
     }
 
     loadPost = (mdFilePath, callback) => {
-        fetch(mdFilePath /*, options */)
+        fetch(mdFilePath, {cache: "no-store"})
         .then((response) => response.text())
         .then((md) => {
             callback(md);
