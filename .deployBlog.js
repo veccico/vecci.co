@@ -66,6 +66,7 @@ const defaultOpenGraph = {
 function alterPageWithMetadata(html, meta) {
     try {
         const metadata = meta || defaultOpenGraph
+        html = html.replace('{og:url}', metadata.url || defaultOpenGraph.url)
         html = html.replace('{og:title}', metadata.title || defaultOpenGraph.title)
         html = html.replace('{og:image}', metadata.image || defaultOpenGraph.image)
         html = html.replace('{og:description}', metadata.description || defaultOpenGraph.description)
@@ -99,12 +100,14 @@ function filterBlogPosts(posts) {
 }
 function formatPost(link) {
     const text = fs.readFileSync(`${rootPath}/posts/${link}.md`, 'utf-8') || ''
+    const url = `https://vecci.co/blog/${link}.html`
     if(text.includes(`<meta name="date"`)) {
         const lines = text.split('\n')
         return {
             topic: findTopic(lines),
             date: findDate(lines),
             link,
+            url,
             title: findTitle(lines),
             image: findImage(lines),
             description: findDescription(text),
