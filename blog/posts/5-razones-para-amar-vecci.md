@@ -26,4 +26,4 @@ Hace mucho tiempo dejamos de leer las publicaciones en papel que pegan en la por
 
 #### Exclusividad
 
-¡Tu unidad tendrá una app propia! No es una app genérica, no es una página web, es la APP de exclusiva para tu conjunto, con el logo de tu conjunto y acceso exclusivo para ti y tus vecinos. Esto es algo que solo Vecci ofrece actualmente.
+¡Tu unidad tendrá una app propia! No es una app genérica, no es una página web, es la APP exclusiva para tu conjunto, con el logo de tu conjunto y acceso exclusivo para ti y tus vecinos. Esto es algo que solo Vecci ofrece actualmente.
