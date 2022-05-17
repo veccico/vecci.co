@@ -4,7 +4,7 @@
 <meta name="language" content="es" />
 <meta name="topic" content="Lifestyle" />
 
-# 5 razones para amar Vecci
+# 5 razones para amar a Vecci
 
 #### Mayor seguridad
 
