@@ -2,7 +2,7 @@
 class BlogController {
 
     constructor() {
-        this.URL_BASE = 'https://gq3ykajn8g.execute-api.us-east-1.amazonaws.com/prod/client'
+        this.THIS_PAGE = "vecci.co"
     }
 
     loadBlog = () => {
@@ -42,7 +42,7 @@ class BlogController {
 
     fixAll = () => {
         fixImages()
-        fixLinks()
+        this.fixLinks()
         addIds()
         setTitle()
         const metadata = findMetadata()
@@ -66,6 +66,17 @@ class BlogController {
         });
     }
 
+    /* Fixing functions */
+
+    fixLinks = () => {
+        var elms = document.querySelectorAll('a');
+        for(var i = 0; i < elms.length; i++) {
+            const elm = elms[i]
+            if(!elm.classList.contains('same-page') || elm.href.includes(this.THIS_PAGE)) {
+                elm.target = '_blank'
+            }
+        }
+    }
 }
 
 class BlogHomeRender {
@@ -214,16 +225,6 @@ function fixImages() {
             }
         } catch {}
 
-    }
-}
-
-function fixLinks() {
-    var elms = document.querySelectorAll('a');
-    for(var i = 0; i < elms.length; i++) {
-        if(!elms[i].classList.contains('same-page'))
-            if(!elms[i].classList.contains('direct-link')) {
-                elms[i].target = '_blank'
-            }
     }
 }
 
