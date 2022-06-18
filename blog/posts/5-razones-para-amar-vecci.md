@@ -12,7 +12,7 @@ El principal trabajo de los porteros es vigilar tu conjunto, estar atentos de cu
 
 #### Movilidad
 
-Con Vecci ya no es indispensable estar en tu casa a la hora que llega un domicilio, o esperar hasta llegar para saber si te ha llegado ese paquete que estabas esperando. Con Vecci además puedes autorizar la entrada de amigos y familiares antes de que tu llegues, o estando por fuera de la ciudad. En este mundo donde la virtualidad se convitió en la regla, más que una excepción, es indispensable que tengas el control de tu vivienda estando dentro o lejos de ella.
+Con Vecci ya no es indispensable estar en tu casa a la hora que llega un domicilio, o esperar hasta llegar para saber si te ha llegado ese paquete que estabas esperando. Con Vecci además puedes autorizar la entrada de amigos y familiares antes de que tú llegues, o estando por fuera de la ciudad. En este mundo donde la virtualidad se convitió en la regla, más que una excepción, es indispensable que tengas el control de tu vivienda estando dentro o lejos de ella.
 
 ![60;;c](/assets/images/blog/pool-phone.jpg)
 
@@ -22,8 +22,8 @@ Con Vecci ya no es indispensable estar en tu casa a la hora que llega un domicil
 
 #### Cartelera moderna
 
-Hace mucho tiempo dejamos de leer las publicaciones en papel que pegan en la portería, y en muchos casos también ignoramos los que están en los asensores. Poner a los guardas a divulgar mensajes también es una tarea tediosa y más en conjuntos con muchas casas o apartamentos. Es hora de que el administrador pueda decirnos por un mensaje, y que este quede visible en la cartelera virtual, sobre todas los eventos que suceden en nuestra unidad. Darnos cuenta a tiempo de un corte de agua o una fumigación programada, nos ayuda a gestionar mejor nuestros horarios y anticipar cambios en nuestra jornada.
+Hace mucho tiempo dejamos de leer las publicaciones en papel que pegan en la portería, y en muchos casos también ignoramos los que están en los asensores. Poner a los guardas a divulgar mensajes también es una tarea tediosa y más en conjuntos con muchas casas o apartamentos. Es hora que el administrador pueda decirnos por un mensaje, y que este quede visible en la cartelera virtual, sobre todo los eventos que suceden en nuestra unidad. Darnos cuenta a tiempo de un corte de agua o una fumigación programada, nos ayuda a gestionar mejor nuestros horarios y anticipar cambios en nuestra jornada.
 
-#### Exclusividad
+#### Construcción de comunidad
 
-¡Tu unidad tendrá una app propia! No es una app genérica, no es una página web, es la APP exclusiva para tu conjunto, con el logo de tu conjunto y acceso exclusivo para ti y tus vecinos. Esto es algo que solo Vecci ofrece actualmente.
+Imagina una red en la que puedes hablar solo con la comunidad de tu conjunto residencial. En Vecci queremos promover la unión entre los vecinos para que la convivencia siempre mejore.
