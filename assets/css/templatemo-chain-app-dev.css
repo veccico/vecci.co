@@ -1384,7 +1384,7 @@ The Clients
 }
 
 .pricing-item-regular span.price {
-  font-size: 40px;
+  font-size: 32px;
   color: #fff;
   position: absolute;
   font-weight: 700;
@@ -1461,7 +1461,7 @@ The Clients
 }
 
 .pricing-item-pro span.price {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #fff;
   position: absolute;
   font-weight: 700;
@@ -1470,7 +1470,7 @@ The Clients
   top: 30px;
 }
 .pricing-item-pro span.currency {
-  font-size: 1em;
+  font-size: 0.9em;
   color: #fff;
   position: absolute;
   font-weight: 700;
