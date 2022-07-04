@@ -14,7 +14,7 @@ El principal trabajo de los porteros es vigilar tu conjunto, estar atentos de cu
 
 Con Vecci ya no es indispensable estar en tu casa a la hora que llega un domicilio, o esperar hasta llegar para saber si te ha llegado ese paquete que estabas esperando. Con Vecci además puedes autorizar la entrada de amigos y familiares antes de que tú llegues, o estando por fuera de la ciudad. En este mundo donde la virtualidad se convitió en la regla, más que una excepción, es indispensable que tengas el control de tu vivienda estando dentro o lejos de ella.
 
-![60;;c](/assets/images/blog/pool-phone.jpg)
+![60;;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/pool-phone.jpg)
 
 #### Control de correspondencia
 

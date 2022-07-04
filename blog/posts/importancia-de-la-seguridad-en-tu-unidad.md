@@ -8,7 +8,7 @@
 
 Estamos pasando por un momento en que la delincuencia crece y aprende rápido y para contrarrestar este entorno es necesario recurrir a toda la capacidad de instaurar las medidas preventivas que sean posibles. El tiempo que dedica un guarda de seguridad en validar la identidad de las personas, en llamar a los apartamentos o en distraerse en la minuta, es tiempo que no está atento a lo que está pasando. Es por eso que es tan importante contar con ayudas digitales para que su trabajo sea lo más eficiente posible.
 
-![70;;c](/assets/images/blog/vigilancia-por-video.jpg)
+![70;;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/vigilancia-por-video.jpg)
 
 Debido a que ahora pasamos más tiempo en nuestras casas, hemos delegado en los porteros tareas que no son su principal motivo para estar ahí. Con el auge del comercio electrónico ellos ahora reciben más paquetes día tras día, lo que les quita valioso tiempo. Además del tiempo recibiendo domicilios y anunciando por el citófono.
 
