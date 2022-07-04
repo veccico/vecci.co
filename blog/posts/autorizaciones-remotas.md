@@ -2,7 +2,7 @@
 
 Con Vecci la autoización de ingresos es muy fácil, tenemos varias alternativas para que no tengas que volver a usar el citófono o dejar una autorización con el administrador de tu conjunto.
 
-![70;;c](/assets/images/blog/scan_qr.jpg)
+![70;;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/scan_qr.jpg)
 
 ¿Estás en una <strong>videollamada</strong> y pedíste el mercado? Puedes dejar una pre-autorización desde la App y cuando tu pedido llegue el portero solo te enviará una notificación.
 

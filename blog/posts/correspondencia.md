@@ -2,7 +2,7 @@
 
 Los porteros pueden confundirse con todo el trabajo que tienen durante ciertas horas del día. Esto además de tener consecuencias en confusión de paquetes, puede significar un problema de seguridad. Con la gestión de correspondencia de Vecci esto ya no será un problema.
 
-![70;;c](/assets/images/blog/package_receiving.jpg)
+![70;;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/package_receiving.jpg)
 
 ¿Has perdido alguna vez un paquete porque se <strong>confundieron</strong> y lo entregaron en otro apartamento? Con Vecci sabes a qué hora exacta llegó un paquete y a quien lo entregaron.
 
