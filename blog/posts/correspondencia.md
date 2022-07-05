@@ -4,8 +4,8 @@ Los porteros pueden confundirse con todo el trabajo que tienen durante ciertas h
 
 ![70;;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/package_receiving.jpg)
 
-¿Has perdido alguna vez un paquete porque se <strong>confundieron</strong> y lo entregaron en otro apartamento? Con Vecci sabes a qué hora exacta llegó un paquete y a quien lo entregaron.
+¿Has perdido alguna vez un paquete porque se **confundieron** y lo entregaron en otro apartamento? Con Vecci sabes a qué hora exacta llegó un paquete y a quien lo entregaron.
 
-Los porteros ahorran tiempo enviando una <strong>notificación</strong> cuando registran la llegada de un paquete, y tu recibes un mensaje en lugar de una llamada por citófono que podría no ser en un <strong>momento oportuno</strong>.
+Los porteros ahorran tiempo enviando una **notificación** cuando registran la llegada de un paquete, y tu recibes un mensaje en lugar de una llamada por citófono que podría no ser en un **momento oportuno**.
 
-Cuando llegan los recibos de los servicios públicos, se envía una <strong>notificación masiva</strong> para que todos sepan que ya se encuentra el recibo en casillero.
+Cuando llegan los recibos de los servicios públicos, se envía una **notificación masiva** para que todos sepan que ya se encuentra el recibo en casillero.
