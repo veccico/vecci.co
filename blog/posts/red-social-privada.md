@@ -1,6 +1,6 @@
-# Red social privada
+# Cartelera Virtual
 
-Vecci es la primera red social de uso exclusivo para la comunidad de tu conjunto residencial. No más carteleras que nadie ve y que pocos se interesan en usar, en el mundo digital que vivimos deberíamos usar nuestro smartphone para hablar con nuestros vecinos.
+Vecci es la primera cartelera virtual para toda la comunidad de tu conjunto residencial. No más tableros que nadie ve, en la era digital que vivimos podemos usar nuestro teléfono para compartir actividades de interés con nuestros vecinos.
 
 ![;300;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/private_social_network.jpg)
 
