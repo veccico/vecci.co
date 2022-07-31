@@ -20,7 +20,7 @@ Con Vecci ya no es indispensable estar en tu casa a la hora que llega un domicil
 
 ### Control de correspondencia
 
-¿Cuantas historias no hemos escuchado de personas que recibieron por equivocación un paquete o una factura que no les correspondía? Esto en gran medida se debe a que el control actual se hace mediante una minuta en papel. El mismo método lleva vigete por varias décadas, pero es momento de actualizarnos al control digital. Mediante un control digital es más fácil verificar a qué hora llegó algo, quien lo recibió, y que se firme su entrega mediante una validación digital, en lugar de la tradicional firma. Además la comunicación se da en tiempo real, porque en el momento que se está registrando la llegada de una factura o se está anunciando que fue entregada, se está enviando una notificación a los teléfonos registrados en ese apartamento.
+¿Cuantas historias no hemos escuchado de personas que recibieron por equivocación un paquete o una factura que no les correspondía? Esto en gran medida se debe a que el control actual se hace mediante una minuta en papel. El mismo método lleva vigente por varias décadas, pero es momento de actualizarnos al control digital. Mediante un control digital es más fácil verificar a qué hora llegó algo, quien lo recibió, y que se firme su entrega mediante una validación digital, en lugar de la tradicional firma. Además la comunicación se da en tiempo real, porque en el momento que se está registrando la llegada de una factura o se está anunciando que fue entregada, se está enviando una notificación a los teléfonos registrados en ese apartamento.
 
 ![60;;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/mailbox-us.jpg)
 
