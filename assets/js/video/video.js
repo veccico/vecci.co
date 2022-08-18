@@ -106,11 +106,10 @@ class VideosController {
     }
     insertVideoContent = (video, active) => {
         return `<div class="tab-pane fade ${active ? 'show active' : ''}" id="post-${video.id}" role="tabpanel" aria-labelledby="post-${video.id}-tab">
+            <div class="video-title-mobile"><h3>${video.title}</h3></div>
             <div style="padding:150% 0 0 0;position:relative;">
                 <iframe src="https://player.vimeo.com/video/${video.id}?h=7e34c37c2b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                    style="position:absolute;top:0;left:0;width:100%;height:50%;"
-                    title="Pre-aprobar domicilios con Vecci"></iframe>
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="video-iframe" title=${video.title}"></iframe>
             </div>
             <script src="https://player.vimeo.com/api/player.js"></script>
         </div>`
