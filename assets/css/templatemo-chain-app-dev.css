@@ -365,6 +365,23 @@ header
   font-weight: 900;
   color: #2a2a2a;
 }
+@media (min-width: 940px) {
+  .header-area .main-nav-fix {
+    padding: 0px 200px;
+  }
+}
+@media (max-width: 939px) {
+  .header-area .main-nav-fix {
+    padding: 0px 100px;
+  }
+}
+.header-area .main-nav-fix a {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+.header-area .main-nav .logo-fix {
+  line-height: 140px !important;
+}
 
 .header-area .main-nav .logo {
     line-height: 100px;
@@ -642,7 +659,7 @@ header
 }
 
 .header-area.header-sticky {
-  min-height: 70px;
+  min-height: 95px;
 }
 
 .header-area .nav {
@@ -1758,7 +1775,6 @@ PopUp
 
 .btn {
   padding: 10px 20px;
-  background: #4b8ef1;
   color: #fff;
   transition: all .3s;
 }
