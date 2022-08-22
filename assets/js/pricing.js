@@ -651,4 +651,3 @@ function openPopup(el) {
 function closePopup() {
      $('.popup').fadeOut(300);
 }
-
