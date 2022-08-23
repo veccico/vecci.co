@@ -10,6 +10,14 @@ class VideosController {
         ]
         this.vimeoVideos = []
         this.hasLoaded = false
+        this.checkIfEmbeeded()
+    }
+
+    checkIfEmbeeded = () => {
+        if ( window.location !== window.parent.location ) {
+            const h = document.querySelector('header')
+            h.parentElement.removeChild(h)
+        }
     }
 
     onTapVideo = (id) => {
