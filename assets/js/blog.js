@@ -29,8 +29,13 @@ class BlogController {
         const {pathname} = location
         const parts = pathname.split('/')
         let article = parts[parts.length-1].split('.')
-        if(article.length == 1) location.replace(pathname+'.html')
+        if(article.length == 1) location.replace(this.fixKnownPaths(pathname)+'.html')
         article = article[0]
+        const fixedArticle = this.fixKnownPaths(article)
+        if(article != fixedArticle) {
+            location.replace(fixedArticle+'.html')
+        }
+
         if(!article) article = 'error'
         let rootPath = ''
         rootPath = location.hostname == 'localhost' ? '' : 'https://raw.githubusercontent.com/cjortegon/vecci.co/master'
@@ -38,6 +43,23 @@ class BlogController {
             document.querySelector('#content').innerHTML = marked(md);
             this.fixAll()
         })
+    }
+
+    fixKnownPaths = (pathname) => {
+        let parts = (pathname || '').split('/')
+        let lastPart = parts.pop()
+        if(lastPart.indexOf('.') != -1) {
+            lastPart = lastPart.split('.').shift()
+        }
+        switch(lastPart) {
+            case "tutoriales":
+            case "tutorial":
+                return parts.join('/')+"/tutorials"
+            case "precios":
+            case "precio":
+                return parts.join('/')+"/pricing"
+        }
+        return pathname
     }
 
     fixAll = () => {
