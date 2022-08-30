@@ -1,3 +1,5 @@
+html, body {min-height:100%; height:100%; overflow-x:hidden; display:block;}
+
 .small-price p {
     font-size: 1.1rem !important;
     margin-top: 10px;

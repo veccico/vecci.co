@@ -33,6 +33,9 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+.vizew-nav-tab, .videos-list, .nav-item {
+  overflow-x:hidden; display:block;
+}
 .tab-content {
   max-width: 92vw;
   max-height: 82vh;
