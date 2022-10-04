@@ -368,6 +368,7 @@
             <li>* Visitas</li>
             <li>* Domicilios</li>
             <li>* Comunicados y notificaciones</li>
+            <li>+ Facturas de administración (siempre es gratis sin pagar suscripción)</li>
           </ul>
           </div>
        </label>
@@ -400,6 +401,13 @@
        
         <div class="col-50">
             <button class="accordion active">
+            <input type="checkbox" id="invoices" disabled onclick="onToggleModule(event);">
+                <label for="">Facturas de administración</label>
+            <span></span>
+            </button>
+        </div>
+        <div class="col-50">
+            <button class="accordion active">
             <input type="checkbox" id="visits" disabled onclick="onToggleModule(event);">
                 <label for="">Visitas</label>
             <span></span>
@@ -430,13 +438,6 @@
             <button class="accordion">
             <input type="checkbox" id="correspondence" onclick="onToggleModule(event);">
                 <label for="">Correspondencia</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="bills" onclick="onToggleModule(event);">
-                <label for="">Facturas masivas</label>
             <span></span>
             </button>
         </div>
@@ -530,13 +531,6 @@
             <button class="accordion">
             <input type="checkbox" id="kidsarrival" disabled onclick="abc();">
                 <label for="">Ruta del colegio</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="iabako" disabled onclick="abc();">
-                <label for="">Facturación de administración</label>
             <span></span>
             </button>
         </div>
