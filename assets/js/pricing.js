@@ -118,10 +118,13 @@ var basicActive = true
 var activeModules = ['visits','deliveries','news']
 
 const RESIDENCE_PRICE = 1800
-const RESIDENCE_MODULE_PRICE = 70
-const MODULE_PRICE = 20000
-const MIN_MODULES_PRICE = 200000
-const MIN_MODULES = 6
+const PLAN_BASIC = 250000
+const PLAN_ADVANCE = 350000
+
+// const RESIDENCE_MODULE_PRICE = 70
+// const MODULE_PRICE = 20000
+// const MIN_MODULES_PRICE = 200000
+// const MIN_MODULES = 6
 
 function onChangePlan(type) {
     basicActive = type == 'basic'
@@ -129,7 +132,7 @@ function onChangePlan(type) {
 }
 function onChangeUnits() {
     const residences = parseInt(document.querySelector('#residences').value)
-    totalResidences = Math.max(60, residences)
+    totalResidences = Math.max(10, residences)
     calculatePrice()
 }
 function onToggleModule(e) {
@@ -147,25 +150,29 @@ function calculatePrice() {
     const resultado = document.querySelector('#resultado')
     const resultadoSmall = document.querySelector('#resultado-small')
 
-    const minModules = basicActive ? 3 : MIN_MODULES
-    const totalModules = activeModules.length
+   //  const minModules = basicActive ? 3 : MIN_MODULES
+   //  const totalModules = activeModules.length
 
-    const extraTrial = totalModules-minModules
-    const extraRegular = totalModules-MIN_MODULES
+   //  const extraTrial = totalModules-minModules
+   //  const extraRegular = totalModules-MIN_MODULES
 
-    let extraModulesPrice = extraTrial*MODULE_PRICE + (extraTrial > 0 ? RESIDENCE_MODULE_PRICE*totalResidences*extraTrial : 0)
-    const fullModulesPrice = extraRegular*MODULE_PRICE + RESIDENCE_MODULE_PRICE*totalResidences*extraRegular
+   //  let extraModulesPrice = extraTrial*MODULE_PRICE + (extraTrial > 0 ? RESIDENCE_MODULE_PRICE*totalResidences*extraTrial : 0)
+   //  const fullModulesPrice = extraRegular*MODULE_PRICE + RESIDENCE_MODULE_PRICE*totalResidences*extraRegular
 
-    const modulesPrice = Math.max(MIN_MODULES_PRICE, MIN_MODULES_PRICE+fullModulesPrice)
-    const price = totalResidences*RESIDENCE_PRICE+modulesPrice
+   //  const modulesPrice = Math.max(MIN_MODULES_PRICE, MIN_MODULES_PRICE+fullModulesPrice)
+   //  const price = totalResidences*RESIDENCE_PRICE+modulesPrice
 
-    if(basicActive) {
-        resultado.innerHTML = `$${numberWithCommas(extraModulesPrice)}`
-        resultadoSmall.innerHTML = `<p>(Por 3 meses)</p><p>Después: $${numberWithCommas(price)}</p>`
-    } else {
-        resultado.innerHTML = `$${numberWithCommas(price)}`
-        resultadoSmall.innerHTML = ''
-    }
+   const price = totalResidences*RESIDENCE_PRICE+(basicActive ? PLAN_BASIC : PLAN_ADVANCE)
+   resultado.innerHTML = `$${numberWithCommas(price)}`
+   resultadoSmall.innerHTML = ''
+
+   //  if(basicActive) {
+   //      resultado.innerHTML = `$${numberWithCommas(extraModulesPrice)}`
+   //      resultadoSmall.innerHTML = `<p>(Por 3 meses)</p><p>Después: $${numberWithCommas(price)}</p>`
+   //  } else {
+   //      resultado.innerHTML = `$${numberWithCommas(price)}`
+   //      resultadoSmall.innerHTML = ''
+   //  }
 }
 
 function numberWithCommas(x) {

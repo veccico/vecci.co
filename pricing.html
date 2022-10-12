@@ -364,23 +364,22 @@
           <h3><b>Básico</b> <span></span></h3>
           <div class="cuadro full">
           <ul class="full ">
-            <li>Gratis los 3 primeros meses</li>
-            <li>* Visitas</li>
-            <li>* Domicilios</li>
+            <li>* Facturas de administración</li>
+            <li>* Visitas y domicilios</li>
             <li>* Comunicados y notificaciones</li>
-            <li>+ Facturas de administración (siempre es gratis sin pagar suscripción)</li>
+            <li>* 5Gb de almacenamiento</li>
           </ul>
           </div>
        </label>
      
        <label class="lbl-checkbox col-45 btn">
          <input class="check1" aria-label="an appropriate label" type="radio" id="avanzado1" value="avanzado" onclick="onChangePlan('custom');" name="Gestion_de_personas">
-         <h3><b>Personalizado</b> <span></span></h3>
+         <h3><b>Avanzado</b> <span></span></h3>
          <div class="cuadro full">
          <ul class="full">
             <li>Todo lo del plan básico</li>
-            <li>* 5Gb de almacenamiento</li>
-            <li>* Módulos adicionales</li>
+            <li>* 10Gb de almacenamiento</li>
+            <li>* Módulos premium</li>
          </ul>
          </div>   
        </label>
@@ -434,6 +433,29 @@
             <span></span>
             </button>
         </div>
+
+    </div>
+    <div class="full"></div>
+    <div class="full">
+
+        <div class="col-50">
+            <h3>&lt;/> Módulos Premium</h3>
+        </div>
+        <!-- <div class="col-50">
+            <h3> &lt;/> </h3>
+        </div> -->
+
+    </div>
+    <div class="full"></div>
+    <div class="full">
+
+        <div class="col-50">
+            <button class="accordion">
+            <input type="checkbox" id="reservations" onclick="onToggleModule(event);">
+                <label for="">Reserva de espacios</label>
+            <span></span>
+            </button>
+        </div>
         <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="correspondence" onclick="onToggleModule(event);">
@@ -448,37 +470,15 @@
             <span></span>
             </button>
         </div>
+        <div class="col-50">
+          <button class="accordion">
+          <input type="checkbox" id="kidsarrival" onclick="onToggleModule(event);">
+              <label for="">Ruta del colegio</label>
+          <span></span>
+          </button>
+      </div>
+
         <!-- <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="reservations" onclick="onToggleModule(event);">
-                <label for="">Reserva de espacios</label>
-            <span></span>
-            </button>
-        </div> -->
-
-    </div>
-    <div class="full"></div>
-    <div class="full">
-
-        <div class="col-50">
-            <h3>&lt;/> Módulos en desarrollo</h3>
-        </div>
-        <!-- <div class="col-50">
-            <h3> &lt;/> </h3>
-        </div> -->
-
-    </div>
-    <div class="full"></div>
-    <div class="full">
-
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="reservations" disabled onclick="abc();">
-                <label for="">Reserva de espacios</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="directory" disabled onclick="abc();">
                 <label for="">Directorio</label>
@@ -526,14 +526,7 @@
                 <label for="">Comunidades</label>
             <span></span>
             </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="kidsarrival" disabled onclick="abc();">
-                <label for="">Ruta del colegio</label>
-            <span></span>
-            </button>
-        </div>
+        </div>-->
 
        <!-- <div class="col-50">
         <button class="accordion">
