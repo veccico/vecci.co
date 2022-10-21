@@ -1652,10 +1652,11 @@ footer #search input {
   border: none;
   background-color: transparent;
   border-bottom: 1px solid #fff;
-  width: 100%;
+  width: 25vw;
 }
 
-footer #search button {
+footer #search .button {
+  margin-left: 20px;
   height: 46px;
   border-radius: 23px;
   border: 1px solid #fff;
@@ -2288,4 +2289,9 @@ responsive
   form#contact {
     padding: 30px;
   }
+}
+
+.k-horizontal-children {
+  display: flex;
+  flex-direction: row;
 }
