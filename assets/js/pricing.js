@@ -117,14 +117,11 @@ var totalResidences = 80
 var basicActive = true
 var activeModules = ['visits','deliveries','news']
 
-const RESIDENCE_PRICE = 1800
-const PLAN_BASIC = 250000
-const PLAN_ADVANCE = 350000
+let RESIDENCE_PRICE = 2300
+let PLAN_BASIC = 250000
+let PLAN_ADVANCE = 350000
 
-// const RESIDENCE_MODULE_PRICE = 70
-// const MODULE_PRICE = 20000
-// const MIN_MODULES_PRICE = 200000
-// const MIN_MODULES = 6
+const urlForPricing = "https://449gwidd80.execute-api.us-east-1.amazonaws.com/prod/client/vecci/config?query={pricing}"
 
 function onChangePlan(type) {
     basicActive = type == 'basic'
@@ -164,7 +161,7 @@ function calculatePrice() {
 
    const price = totalResidences*RESIDENCE_PRICE+(basicActive ? PLAN_BASIC : PLAN_ADVANCE)
    resultado.innerHTML = `$${numberWithCommas(price)}`
-   resultadoSmall.innerHTML = ''
+   resultadoSmall.innerHTML = `<p>$${numberWithCommas(Math.ceil(price/Math.max(totalResidences, 1)))} por residencia</p>`
 
    //  if(basicActive) {
    //      resultado.innerHTML = `$${numberWithCommas(extraModulesPrice)}`
