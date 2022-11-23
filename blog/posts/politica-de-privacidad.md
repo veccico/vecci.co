@@ -8,6 +8,8 @@ Utilizamos sus datos para proporcionar y mejorar el Servicio. Al usar el Servici
 
 ## Definiciones
 
+<br />
+
 **Servicio:** significa el sitio web y todas las aplicaciones móviles de Vecci operadas por Camilo Ortegón.
 
 **Datos personales:** se refiere a datos sobre una persona viva que puede identificarse a partir de esos datos (o de esa y otra información en nuestro poder o que probablemente llegue a nuestro poder).
@@ -37,7 +39,7 @@ Mientras usa nuestro Servicio, podemos pedirle que nos proporcione cierta inform
 
 <br />
 
-**DATOS DE USO**
+#### DATOS DE USO
 
 También podemos recopilar información que su navegador envía cada vez que visita nuestro Servicio o cuando accede al Servicio a través de un dispositivo móvil ("Datos de uso").
 
@@ -45,13 +47,13 @@ Estos Datos de uso pueden incluir información como la dirección del Protocolo 
 
 Cuando accede al Servicio a través de un dispositivo móvil, estos Datos de uso pueden incluir información como el tipo de dispositivo móvil que utiliza, la dirección IP de su dispositivo móvil, su sistema operativo móvil y otros datos de diagnóstico.
 
-**DATOS DE LOCALIZACIÓN**
+#### DATOS DE LOCALIZACIÓN
 
 Podemos usar y almacenar información sobre su ubicación si nos da permiso para hacerlo ("Datos de ubicación"). Usamos estos datos para proporcionar características de nuestro Servicio, para mejorar y personalizar nuestro Servicio.
 
 Puede habilitar o deshabilitar los servicios de ubicación cuando utiliza nuestro Servicio en cualquier momento, a través de la configuración de su dispositivo.
 
-**DATOS DE SEGUIMIENTO Y COOKIES**
+#### DATOS DE SEGUIMIENTO Y COOKIES
 
 Usamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestro Servicio y conservar cierta información.
 
