@@ -8,8 +8,6 @@ Utilizamos sus datos para proporcionar y mejorar el Servicio. Al usar el Servici
 
 ## Definiciones
 
-<br />
-
 **Servicio:** significa el sitio web y todas las aplicaciones móviles de Vecci operadas por Camilo Ortegón.
 
 **Datos personales:** se refiere a datos sobre una persona viva que puede identificarse a partir de esos datos (o de esa y otra información en nuestro poder o que probablemente llegue a nuestro poder).
@@ -30,7 +28,7 @@ Recopilamos varios tipos diferentes de información para varios propósitos para
 
 ### Tipos de datos recopilados
 
-**INFORMACIÓN PERSONAL**
+#### INFORMACIÓN PERSONAL
 
 Mientras usa nuestro Servicio, podemos pedirle que nos proporcione cierta información de identificación personal que se puede usar para contactarlo o identificarlo ("Datos personales"). La información de identificación personal puede incluir, entre otros:
 
