@@ -102,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #444;
     line-height: 0.9em;
     margin-bottom: 10px;
+    line-height: 1.15em !important;
 }
 
 a {
@@ -129,23 +130,25 @@ a {
         padding-bottom: 20px;
     }
     h1 {
-        font-size: 2.4em;
+        font-size: 1.9em;
     }
     h2 {
-        font-size: 1.7em;
-        font-weight: 800;
+        font-size: 1.5em;
+        font-weight: 900;
     }
     h3 {
-        font-size: 1.6em;
+        font-size: 1.4em;
+        margin-bottom: 20px !important;
     }
     h4 {
-        font-size: 1.5em;
+        font-size: 1.2em;
+        font-weight: 800;
     }
     h5 {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     h6 {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 }
 
@@ -256,6 +259,10 @@ a {
         font-size: 1.4em;
         line-height: 0.9em;
     }
+}
+
+.blog-content ul li {
+    list-style: inside !important;
 }
 
 /* Social sharing */
