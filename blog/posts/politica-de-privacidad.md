@@ -1,4 +1,4 @@
-# Politica de privacidad
+# Política de Tratamiento de Datos Personales (Política de Privacidad)
 
 Vecci (Camilo Ortegón CC. 1.144.043.428) (en adelante “nosotros” o “nuestro”) opera el sitio web y las aplicaciones móviles (el “Servicio").
 
@@ -8,13 +8,19 @@ Utilizamos sus datos para proporcionar y mejorar el Servicio. Al usar el Servici
 
 ## Definiciones
 
-* Servicio: significa el sitio web y todas las aplicaciones móviles de Vecci operadas por Camilo Ortegón.
-* Datos personales: se refiere a datos sobre una persona viva que puede identificarse a partir de esos datos (o de esa y otra información en nuestro poder o que probablemente llegue a nuestro poder).
-* Datos de uso: son datos recopilados automáticamente generados por el uso del Servicio o de la propia infraestructura del Servicio (por ejemplo, la duración de una visita a la página).
-* Cookies: Las cookies son pequeños fragmentos de datos almacenados en su dispositivo (computadora o dispositivo móvil).
-* Controlador de datos: se refiere a la persona física o jurídica que (ya sea sola o conjuntamente o en común con otras personas) determina los propósitos para los cuales y la manera en que se procesa o se procesará cualquier información personal. A los efectos de esta Política de privacidad, somos un controlador de datos de sus datos personales.
-* Procesadores de datos (o Proveedores de servicios): significa cualquier persona física o jurídica que procese los datos en nombre del Controlador de datos. Podemos utilizar los servicios de varios proveedores de servicios para procesar sus datos de manera más efectiva.
-* Sujeto de datos (o Usuario): es cualquier individuo vivo que utiliza nuestro Servicio y es sujeto de Datos personales.
+**Servicio:** significa el sitio web y todas las aplicaciones móviles de Vecci operadas por Camilo Ortegón.
+
+**Datos personales:** se refiere a datos sobre una persona viva que puede identificarse a partir de esos datos (o de esa y otra información en nuestro poder o que probablemente llegue a nuestro poder).
+
+**Datos de uso:** son datos recopilados automáticamente generados por el uso del Servicio o de la propia infraestructura del Servicio (por ejemplo, la duración de una visita a la página).
+
+**Cookies:** Las cookies son pequeños fragmentos de datos almacenados en su dispositivo (computadora o dispositivo móvil).
+
+**Controlador de datos:** se refiere a la persona física o jurídica que (ya sea sola o conjuntamente o en común con otras personas) determina los propósitos para los cuales y la manera en que se procesa o se procesará cualquier información personal. A los efectos de esta Política de privacidad, somos un controlador de datos de sus datos personales.
+
+**Procesadores de datos (o Proveedores de servicios):** significa cualquier persona física o jurídica que procese los datos en nombre del Controlador de datos. Podemos utilizar los servicios de varios proveedores de servicios para procesar sus datos de manera más efectiva.
+
+**Sujeto de datos (o Usuario):** es cualquier individuo vivo que utiliza nuestro Servicio y es sujeto de Datos personales.
 
 ## Recopilación y uso de la información
 
@@ -28,6 +34,8 @@ Mientras usa nuestro Servicio, podemos pedirle que nos proporcione cierta inform
 
 * Nombre.
 * Cédula de ciudadanía.
+
+<br />
 
 **DATOS DE USO**
 
@@ -57,6 +65,8 @@ Ejemplos de Cookies que utilizamos:
 * __Cookies de Preferencia.__ Usamos Cookies de Preferencia para recordar sus preferencias y varias configuraciones.
 * __Cookies de seguridad.__ Utilizamos cookies de seguridad por motivos de seguridad.
 
+<br />
+
 ## Uso de datos
 
 Vecci utiliza los datos recopilados para diversos fines:
@@ -68,5 +78,7 @@ Vecci utiliza los datos recopilados para diversos fines:
 * Para recopilar análisis o información valiosa para que podamos mejorar nuestro Servicio
 * Para monitorear el uso de nuestro Servicio
 * Para detectar, prevenir y abordar problemas técnicos
+
+<br />
 
 Al inscribirse en una unidad residencial, otoroga el tratamiento de datos por parte del administrador o administradores que se han designado para la unidad y son estos quienes pueden aceptar su ingreso en nuestra plataforma. Nunca compartiremos sus datos con terceros sin su expresa autorización.
