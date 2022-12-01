@@ -55,15 +55,15 @@ En cualquier caso, Vecci se reserva la posibilidad de suspender temporalmente la
 
 ## Condiciones especiales aplicables a los distintos tipos de servicio de Vecci
 
-### Autorizaciones remotas
+#### Autorizaciones remotas
 
 La herramienta de autorizaciones remotas deberá utilizarse con la mayor responsabilidad y transparencia posible por parte del Usuario. El Usuario entregará la información de los invitados y/o autorizados para el ingreso a la propiedad de la manera más confidencial posible y no entregará dicha información con terceros, más que el personal de seguridad de la copropiedad, y de la persona autorizada para el ingreso. Es muy importante que el usuario no comparta su cuenta y/o contraseña con terceros, para que no existan inconvenientes en la aprobación de ingresos a personas no autorizadas. Vecci no será responsable de los inconvenientes que puedan surgir en relación a las autorizaciones cuando exista un mal uso de la cuenta o un mal protocolo de confirmación de datos por parte del personal de seguridad y vigilancia de la copropiedad.
 
-### Correspondencia
+#### Correspondencia
 
 La herramienta para gestión de correspondencia le permita a las administraciones y/o a las empresas de seguridad y vigilancia de la copropiedad realizar el ingreso de la entrega de un paquete por un tercero transportador; se aclara que Vecci no participa del proceso de custodia ni de transporte de la mercancía, y por ende no es responsable por la pérdida, daño o deterioro de las mismas, cualquier inconveniente relacionado con la mercancía deberá ser gestionado directamente con la administración.
 
-### Cartelera Virtual y comunicación efectiva
+#### Cartelera Virtual y comunicación efectiva
 
 En esta herramienta los usuarios podrán publicar información de valor, para lo cual realizarán una publicación en un newsfeed (pantalla de inicio donde se anuncian publicaciones). Los usuarios deberán en todo momento cumplir con las políticas de ética y buena conducta de las copropiedades para la comunicación entre residentes, de no existir estas políticas, se abstendrán de realizar cualquier publicación con contenido ofensivo, discriminatorio o que atente contra los intereses de una persona y/o con el buen ambiente de la copropiedad. Vecci podrá dar de baja las publicaciones y/o la cuenta del residente que tengan contenido que atente contra cualquiera de dichas políticas y/o intereses de terceros afectados.  Vecci no ofrece, promociona o será responsable del contenido publicado por los residentes, ni por la veracidad y/o falsedad de los mismos.
 
