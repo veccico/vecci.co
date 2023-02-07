@@ -416,8 +416,8 @@
         </div>
         <div class="col-50">
             <button class="accordion">
-            <input type="checkbox" id="polls" onclick="onToggleModule(event);">
-                <label for="">Encuestas y Votaciones</label>
+            <input type="checkbox" id="files" onclick="onToggleModule(event);">
+                <label for="">Archivos *</label>
             <span></span>
             </button>
         </div>
@@ -430,10 +430,16 @@
         </div>
         <div class="col-50">
             <button class="accordion">
-            <input type="checkbox" id="files" onclick="onToggleModule(event);">
-                <label for="">Archivos</label>
+            <input type="checkbox" id="polls" onclick="onToggleModule(event);">
+                <label for="">Encuestas y Votaciones **</label>
             <span></span>
             </button>
+        </div>
+
+        <div class="pricing-policy">
+          <span>* Incluido por la compra del módulo de Comunicación o Cartera</span>
+          <br/>
+          <span>** Incluido por la compra de 3 módulos</span>
         </div>
 
     </div>
@@ -474,11 +480,25 @@
         </div>
         <div class="col-50">
           <button class="accordion">
-          <input type="checkbox" id="kidsarrival" onclick="onToggleModule(event);">
+          <input type="checkbox" id="whatsapp" onclick="onToggleModule(event);">
               <label for="">Integración con Whatsapp</label>
           <span></span>
           </button>
-      </div>
+        </div>
+        <div class="col-50">
+          <button class="accordion">
+          <input type="checkbox" id="cardspayments" onclick="onToggleModule(event);">
+              <label for="">Recaudos con tarjeta de crédito</label>
+          <span></span>
+          </button>
+        </div>
+        <div class="col-50">
+          <button class="accordion">
+          <input type="checkbox" id="asamblea" onclick="onToggleModule(event);">
+              <label for="">Asamblea virtual</label>
+          <span></span>
+          </button>
+        </div>
 
         <!-- <div class="col-50">
             <button class="accordion">
@@ -661,23 +681,24 @@
   <div class="span4 sticky-e">
       <div class="titulo col-100 lazy-background visible">
          <h2>Valor del Plan</h2>
-         <p>Por mes </p>
+         <p>Mensual</p>
       </div>
       <div class="col-100 sombra">
          <div class="col-100 borde-2">
             <p class="resul naranjo-claro">
-              <span id="currency-pricing" class="currency">COP</span>
-              <br>
+              <!-- <span id="currency-pricing" class="currency">COP</span>
+              <br> -->
               <b id="resultado">$0</b>
               <br>
-              <b id="resultado-small" class="small-price" id="resultado"></b>
+              <b id="resultado-small" class="small-price"></b>
+              <b id="resultado-hint" class="hint-price"></b>
             </p>
           </div>
         <a class="btn1" href="https://api.whatsapp.com/send/?phone=%2B573054583748&text=Quiero+conocer+los+precios+de+Vecci">Cotizar ahora</a>     
       </div>
       <div class="col-100 " id="your-discount" style="padding-top: 20px; display: block;">
         <div class="col-100" id="attain-discount" style="display: block;">
-          <p class="discount-txt">Armamos el plan a <span id="attain-modules">tu medida</span></p>
+          <p class="discount-txt">Arma el plan a <span id="attain-modules">tu medida</span></p>
         </div>
         <div class="col-100" id="discount-message">
           <p class="discount-txt">Tienes un descuento del: <span id="discount-value"></span></p>
@@ -752,7 +773,7 @@
   <h3>¿Cuántos usuarios están incluidos?</h3> 
 </button>
 <div class="panel_n">
-<p><span>La cantidad de usuarios es ilimitada, solo cobramos por la subscripción a la unidad residencial, pero el uso de la aplicación para todos los residentes, copropietarios, porteros y demás interesados es completamente gratis.</span></p>
+<p><span>La cantidad de usuarios es ilimitada, solo cobramos por la subscripción a la unidad residencial, y el uso de la aplicación para todos los residentes, copropietarios, porteros es gratuito.</span></p>
 </div>
 <div class="border-panel_n"> </div>   
 
@@ -789,6 +810,15 @@
 </button>
 <div class="panel_n">
 <p><span>Sí. Todas las actualizaciones de los módulos que adquieras serán incluidas en tu plan. Y los nuevos módulos que vamos sacando los puedes adquirir en el momento que estén disponibles.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+<button class="accordion_n">
+  <span>8</span> 
+  <h3>¿Tienen aplicación para residentes?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Sí. Adquiriendo cualquier plan tienes acceso a la aplicación para residentes totalmente gratis. El administrador del conjunto debe aprobar el registro de los usuarios para que tengan acceso.</span></p>
 </div>
 <div class="border-panel_n"> </div>  
  

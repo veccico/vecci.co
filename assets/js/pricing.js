@@ -147,9 +147,10 @@ function onToggleModule(e) {
 }
 
 function calculatePrice() {
-   const currency = document.querySelector('#currency-pricing')
+   // const currency = document.querySelector('#currency-pricing')
    const resultado = document.querySelector('#resultado')
    const resultadoSmall = document.querySelector('#resultado-small')
+   const resultadoHint = document.querySelector('#resultado-hint')
 
    //  const minModules = basicActive ? 3 : MIN_MODULES
    //  const totalModules = activeModules.length
@@ -166,6 +167,7 @@ function calculatePrice() {
    // const price = totalResidences*RESIDENCE_PRICE+(basicActive ? PLAN_BASIC : PLAN_ADVANCE)
 
    let price = 0
+   let hasModules = activeModules.length > 0
    if(totalPaid == 0) {
       // No price
    } else if(isAnnually) {
@@ -173,24 +175,23 @@ function calculatePrice() {
    } else {
       price = totalPaid == 1 ? 60000 : 60000 + 24000*(totalPaid-1)
    }
+   // console.log({hasModules, totalPaid, isAnnually, price})
 
-   if(price || !totalPaid) {
-      currency.innerHTML = 'COP'
+   if(price && hasModules) {
       resultado.innerHTML = `$${numberWithCommas(price)}`
       resultadoSmall.innerHTML = `<p>$${numberWithCommas(Math.ceil(price/Math.max(totalResidences, 1)))} COP por unidad</p>`
+      if(isAnnually) {
+         resultadoHint.innerHTML = `<p>1 pago único: $${numberWithCommas(price*12)} al año</p>`
+      } else {
+         resultadoHint.innerHTML = ''
+      }
    } else {
-      currency.innerHTML = ''
-      resultado.innerHTML = 'Cotizar'
+      resultado.innerHTML = hasModules ? `$0` : 'Cotizar'
       resultadoSmall.innerHTML = '<p>Arma tu plan a la medida</p>'
+      if(hasModules) {
+         resultadoHint.innerHTML = `<p>* Modulos sujetos a adquirir otro plan.</p>`
+      }
    }
-
-   //  if(basicActive) {
-   //      resultado.innerHTML = `$${numberWithCommas(extraModulesPrice)}`
-   //      resultadoSmall.innerHTML = `<p>(Por 3 meses)</p><p>Después: $${numberWithCommas(price)}</p>`
-   //  } else {
-   //      resultado.innerHTML = `$${numberWithCommas(price)}`
-   //      resultadoSmall.innerHTML = ''
-   //  }
 }
 
 function numberWithCommas(x) {
