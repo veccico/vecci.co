@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
 <link rel="stylesheet" href="assets/css/Precios.min.css">
-<link rel="stylesheet" href="assets/css/pricing.css">
+<link rel="stylesheet" href="assets/css/pricing2.css">
 <link rel="stylesheet" href="assets/css/grid-prices.min.css" as="style" onload="this.onload=null;">
 <noscript><link rel="stylesheet" href="./pricing/grid-prices.min.css"></noscript>
 
@@ -435,15 +435,25 @@
             <span></span>
             </button>
         </div>
-
-        <div class="pricing-policy">
-          <span>* Incluido por la compra del módulo de Comunicación o Cartera</span>
-          <br/>
-          <span>** Incluido por la compra de 3 módulos</span>
+        <!-- <div class="col-50"></div> -->
+        <div class="col-50">
+          <button class="accordion">
+          <input type="checkbox" id="panic" onclick="onToggleModule(event);">
+              <label for="">Botón de pánico ***</label>
+          <span></span>
+          </button>
         </div>
 
     </div>
-    <div class="full"></div>
+    <div class="full" style="margin-bottom: 10px;">
+      <div class="pricing-policy">
+        <span class="pricing-policy-bullet">*</span> <span>Incluido por la compra del módulo de Comunicación o Cartera</span>
+        <br/>
+        <span class="pricing-policy-bullet">**</span> <span>Incluido por la compra de 3 módulos</span>
+        <br/>
+        <span class="pricing-policy-bullet">***</span> <span>Incluido en todos los paquetes</span>
+      </div>
+    </div>
     <div class="full">
 
         <div class="col-50">
