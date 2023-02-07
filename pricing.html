@@ -346,7 +346,7 @@
     <div class=" col-100 colaboradores">
        <div class="titulo col-100 lazy-background visible">
          <h2>Número de casas o apartamentos</h2>
-         <p>Indica cuantas <b>casas o apartamentos</b> hay en tu unidad.</p>
+         <p>Indica cuantas <b>casas o apartamentos</b> hay en tu conjunto residencial.</p>
        </div>
         <div class="contenido col-100">
          <input class="" name="residences" id="residences" value="80" type="number" placeholder=" 0 " min="1" max="1000" oninput="onChangeUnits();"> 
@@ -355,33 +355,28 @@
      
     <div class=" col-100 gestion_de_personas">
        <div class="titulo col-100 lazy-background visible">
-         <h2>Escoge tu plan</h2>
-         <p>Prueba Vecci gratis <b>por 3 meses</b></p>
+         <h2>Modo de pago</h2>
+         <p>Prueba todo <b>por 2 meses</b> adquiriendo cualquier plan</p>
        </div>
         <div class="contenido col-100" id="myDIV">
         <label class="lbl-checkbox col-45 btn active">
-         <input class="check1" aria-label="an appropriate label" type="radio" id="basico1" value="basico" onclick="onChangePlan('basic');" name="Gestion_de_personas">
-          <h3><b>Básico</b> <span></span></h3>
-          <div class="cuadro full">
+         <input class="check1" aria-label="an appropriate label" type="radio" id="basico1" value="basico" onclick="onChangePlan('annual');" name="Gestion_de_personas">
+          <h3><b>Pago anual</b> <span></span></h3>
+          <!-- <div class="cuadro full">
           <ul class="full ">
             <li>* Facturas de administración</li>
-            <li>* Visitas y domicilios</li>
-            <li>* Comunicados y notificaciones</li>
-            <li>* 5Gb de almacenamiento</li>
           </ul>
-          </div>
+          </div> -->
        </label>
      
        <label class="lbl-checkbox col-45 btn">
-         <input class="check1" aria-label="an appropriate label" type="radio" id="avanzado1" value="avanzado" onclick="onChangePlan('custom');" name="Gestion_de_personas">
-         <h3><b>Avanzado</b> <span></span></h3>
-         <div class="cuadro full">
+         <input class="check1" aria-label="an appropriate label" type="radio" id="avanzado1" value="avanzado" onclick="onChangePlan('monthly');" name="Gestion_de_personas">
+         <h3><b>Pago mensual</b> <span></span></h3>
+         <!-- <div class="cuadro full">
          <ul class="full">
             <li>Todo lo del plan básico</li>
-            <li>* 10Gb de almacenamiento</li>
-            <li>* Módulos premium</li>
          </ul>
-         </div>   
+         </div>    -->
        </label>
 
 </div>  
@@ -400,36 +395,43 @@
        
         <div class="col-50">
             <button class="accordion active">
-            <input type="checkbox" id="invoices" disabled onclick="onToggleModule(event);">
-                <label for="">Facturas de administración</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion active">
-            <input type="checkbox" id="visits" disabled onclick="onToggleModule(event);">
-                <label for="">Visitas</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion active">
-            <input type="checkbox" id="deliveries" disabled onclick="onToggleModule(event);">
-                <label for="">Domicilios</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion active">
-            <input type="checkbox" id="news" disabled onclick="onToggleModule(event);">
-                <label for="">Comunicados</label>
+            <input type="checkbox" id="intercom" checked onclick="onToggleModule(event);">
+                <label for="">Citofonía</label>
             <span></span>
             </button>
         </div>
         <div class="col-50">
             <button class="accordion">
-            <input type="checkbox" id="board" onclick="onToggleModule(event);">
-                <label for="">Cartelera</label>
+            <input type="checkbox" id="invoices" onclick="onToggleModule(event);">
+                <label for="">Cartera y Pagos</label>
+            <span></span>
+            </button>
+        </div>
+        <div class="col-50">
+            <button class="accordion">
+            <input type="checkbox" id="news" onclick="onToggleModule(event);">
+                <label for="">Comunicación</label>
+            <span></span>
+            </button>
+        </div>
+        <div class="col-50">
+            <button class="accordion">
+            <input type="checkbox" id="polls" onclick="onToggleModule(event);">
+                <label for="">Encuestas y Votaciones</label>
+            <span></span>
+            </button>
+        </div>
+        <div class="col-50">
+            <button class="accordion">
+            <input type="checkbox" id="visits" onclick="onToggleModule(event);">
+                <label for="">Autorizaciones e Ingresos</label>
+            <span></span>
+            </button>
+        </div>
+        <div class="col-50">
+            <button class="accordion">
+            <input type="checkbox" id="files" onclick="onToggleModule(event);">
+                <label for="">Archivos</label>
             <span></span>
             </button>
         </div>
@@ -439,7 +441,7 @@
     <div class="full">
 
         <div class="col-50">
-            <h3>&lt;/> Módulos Premium</h3>
+            <h3>&lt;/> Próximamente</h3>
         </div>
         <!-- <div class="col-50">
             <h3> &lt;/> </h3>
@@ -458,22 +460,22 @@
         </div>
         <div class="col-50">
             <button class="accordion">
-            <input type="checkbox" id="correspondence" onclick="onToggleModule(event);">
-                <label for="">Correspondencia</label>
+            <input type="checkbox" id="pqrs" onclick="onToggleModule(event);">
+                <label for="">PQRS</label>
             <span></span>
             </button>
         </div>
         <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="files" onclick="onToggleModule(event);">
-                <label for="">Archivos</label>
+                <label for="">Integración con Contabilidad</label>
             <span></span>
             </button>
         </div>
         <div class="col-50">
           <button class="accordion">
           <input type="checkbox" id="kidsarrival" onclick="onToggleModule(event);">
-              <label for="">Ruta del colegio</label>
+              <label for="">Integración con Whatsapp</label>
           <span></span>
           </button>
       </div>
@@ -659,23 +661,23 @@
   <div class="span4 sticky-e">
       <div class="titulo col-100 lazy-background visible">
          <h2>Valor del Plan</h2>
-         <p>Mensual </p>
+         <p>Por mes </p>
       </div>
       <div class="col-100 sombra">
          <div class="col-100 borde-2">
             <p class="resul naranjo-claro">
-              <span class="currency">COP</span>
+              <span id="currency-pricing" class="currency">COP</span>
               <br>
               <b id="resultado">$0</b>
               <br>
               <b id="resultado-small" class="small-price" id="resultado"></b>
             </p>
           </div>
-        <a class="btn1" href="/">Empezar ahora</a>     
+        <a class="btn1" href="https://api.whatsapp.com/send/?phone=%2B573054583748&text=Quiero+conocer+los+precios+de+Vecci">Cotizar ahora</a>     
       </div>
       <div class="col-100 " id="your-discount" style="padding-top: 20px; display: block;">
         <div class="col-100" id="attain-discount" style="display: block;">
-          <p class="discount-txt">Prueba Vecci <span id="attain-modules">gratis</span> por 3 meses</p>
+          <p class="discount-txt">Armamos el plan a <span id="attain-modules">tu medida</span></p>
         </div>
         <div class="col-100" id="discount-message">
           <p class="discount-txt">Tienes un descuento del: <span id="discount-value"></span></p>
@@ -732,7 +734,7 @@
   <h3>¿Cómo calculan el precio?</h3> 
 </button>
 <div class="panel_n">
-<p><span>El precio es calculado con base en la cantidad de casas o apartamentos de tu unidad, y también a la cantidad de módulos que tengas activos.</span></p>
+<p><span>Pagas solo por la cantidad de módulos que quieras usar, no importa la cantidad de casas o apartamentos que tenga tu conjunto. Cuando realizas el pago anual se descuenta el valor de 2 meses.</span></p>
 </div>
 <div class="border-panel_n"> </div>   
 
@@ -741,7 +743,7 @@
   <h3>¿Cúal es la frecuencia del cobro?</h3> 
 </button>
 <div class="panel_n">
-<p><span>El cobro es mensual, pero si deseas hacer el pago anual te damos un descuento del 15%, pregúntale al asesor.</span></p>
+<p><span>Puedes pagar mensualmente o con una tarifa especial si el pago es anual. Escríbenos.</span></p>
 </div>
 <div class="border-panel_n"> </div>   
 
@@ -750,16 +752,16 @@
   <h3>¿Cuántos usuarios están incluidos?</h3> 
 </button>
 <div class="panel_n">
-<p><span>La cantidad de usuarios es ilimitada, el precio se calcula basado en el número de casas o apartamentos de tu unidad, así que todos pueden tener instalada la aplicación sin ningún costo extra.</span></p>
+<p><span>La cantidad de usuarios es ilimitada, solo cobramos por la subscripción a la unidad residencial, pero el uso de la aplicación para todos los residentes, copropietarios, porteros y demás interesados es completamente gratis.</span></p>
 </div>
 <div class="border-panel_n"> </div>   
 
 <button class="accordion_n">
   <span>4</span> 
-  <h3>¿Qué módulos están incluidos en el periodo de prueba?</h3> 
+  <h3>¿Ofrecen un periodo de prueba?</h3> 
 </button>
 <div class="panel_n">
-<p><span>El periodo de prueba tiene una duración de 3 meses e incluye sin ningún costo estos 3 módulos: visitas, domicilios y comunicados.</span></p>
+<p><span>Adquiriendo cualquiera de nuestros planes, recibes hasta 2 meses gratis para probar cada uno de los módulos.</span></p>
 </div>
 <div class="border-panel_n"> </div>   
 
@@ -768,16 +770,16 @@
   <h3>¿La implementación está incluida en la mensualidad?</h3> 
 </button>
 <div class="panel_n">
-<p><span>Sí. Se te asignará un asesor que te guiará durante todo el proceso sin costo adicional, pagando tu mensualidad.</span></p>
+<p><span>Sí. Se te asignará un asesor que te guiará durante todo el proceso sin costo adicional, pagando la subscripción.</span></p>
 </div>
 <div class="border-panel_n"> </div>   
 
 <button class="accordion_n">
   <span>6</span> 
-  <h3>¿Las capacitaciones están incluidas en la mensualidad?</h3> 
+  <h3>¿Las capacitaciones están incluidas?</h3> 
 </button>
 <div class="panel_n">
-<p><span>Sí. Te capacitamos para que aprendas a administrar la plataforma y contamos con un aplio repositorio de tutoriales para cada acción que desees realizar.</span></p>
+<p><span>Sí. Capacitamos al administrador, porteros y residentes. También tenemos una amplia colección de videos para aprender a usar cada módulo, disponible en esta página y dentro de la aplicación.</span></p>
 </div>
 <div class="border-panel_n"> </div>   
 
@@ -786,7 +788,7 @@
   <h3>¿El precio incluye nuevas funcionalidades y actualizaciones?</h3> 
 </button>
 <div class="panel_n">
-<p><span>Sí. Todos los cambios futuros están incluidos, nuevas funcionalidades, actualizaciones o mejoras de la aplicación.</span></p>
+<p><span>Sí. Todas las actualizaciones de los módulos que adquieras serán incluidas en tu plan. Y los nuevos módulos que vamos sacando los puedes adquirir en el momento que estén disponibles.</span></p>
 </div>
 <div class="border-panel_n"> </div>  
  

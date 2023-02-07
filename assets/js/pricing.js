@@ -114,8 +114,10 @@ function CalculateFactorAdelantos(number_collaborators) {
   }
 
 var totalResidences = 80
-var basicActive = true
-var activeModules = ['visits','deliveries','news']
+var isAnnually = true //basicActive
+var activeModules = ['intercom']
+const paidModules = ['intercom','invoices','news','visits']
+var totalPaid = 1
 
 let RESIDENCE_PRICE = 2300
 let PLAN_BASIC = 250000
@@ -124,7 +126,7 @@ let PLAN_ADVANCE = 350000
 const urlForPricing = "https://449gwidd80.execute-api.us-east-1.amazonaws.com/prod/client/vecci/config?query={pricing}"
 
 function onChangePlan(type) {
-    basicActive = type == 'basic'
+   isAnnually = type == 'annual'
     calculatePrice()
 }
 function onChangeUnits() {
@@ -133,19 +135,21 @@ function onChangeUnits() {
     calculatePrice()
 }
 function onToggleModule(e) {
-    const mod = e.target.id
-    const input = document.querySelector('#'+mod)
-    if(input.checked) {
-        activeModules.push(mod)
-    } else {
-        activeModules = activeModules.filter(m => m != mod)
-    }
-    calculatePrice()
+   const mod = e.target.id
+   const input = document.querySelector('#'+mod)
+   if(input.checked) {
+      activeModules.push(mod)
+   } else {
+      activeModules = activeModules.filter(m => m != mod)
+   }
+   totalPaid = activeModules.filter(m => paidModules.indexOf(m) != -1).length
+   calculatePrice()
 }
 
 function calculatePrice() {
-    const resultado = document.querySelector('#resultado')
-    const resultadoSmall = document.querySelector('#resultado-small')
+   const currency = document.querySelector('#currency-pricing')
+   const resultado = document.querySelector('#resultado')
+   const resultadoSmall = document.querySelector('#resultado-small')
 
    //  const minModules = basicActive ? 3 : MIN_MODULES
    //  const totalModules = activeModules.length
@@ -159,9 +163,26 @@ function calculatePrice() {
    //  const modulesPrice = Math.max(MIN_MODULES_PRICE, MIN_MODULES_PRICE+fullModulesPrice)
    //  const price = totalResidences*RESIDENCE_PRICE+modulesPrice
 
-   const price = totalResidences*RESIDENCE_PRICE+(basicActive ? PLAN_BASIC : PLAN_ADVANCE)
-   resultado.innerHTML = `$${numberWithCommas(price)}`
-   resultadoSmall.innerHTML = `<p>$${numberWithCommas(Math.ceil(price/Math.max(totalResidences, 1)))} por residencia</p>`
+   // const price = totalResidences*RESIDENCE_PRICE+(basicActive ? PLAN_BASIC : PLAN_ADVANCE)
+
+   let price = 0
+   if(totalPaid == 0) {
+      // No price
+   } else if(isAnnually) {
+      price = totalPaid == 1 ? 50000 : 50000 + 20000*(totalPaid-1)
+   } else {
+      price = totalPaid == 1 ? 60000 : 60000 + 24000*(totalPaid-1)
+   }
+
+   if(price || !totalPaid) {
+      currency.innerHTML = 'COP'
+      resultado.innerHTML = `$${numberWithCommas(price)}`
+      resultadoSmall.innerHTML = `<p>$${numberWithCommas(Math.ceil(price/Math.max(totalResidences, 1)))} COP por unidad</p>`
+   } else {
+      currency.innerHTML = ''
+      resultado.innerHTML = 'Cotizar'
+      resultadoSmall.innerHTML = '<p>Arma tu plan a la medida</p>'
+   }
 
    //  if(basicActive) {
    //      resultado.innerHTML = `$${numberWithCommas(extraModulesPrice)}`
