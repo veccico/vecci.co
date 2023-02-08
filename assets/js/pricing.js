@@ -166,14 +166,16 @@ function calculatePrice() {
 
    // const price = totalResidences*RESIDENCE_PRICE+(basicActive ? PLAN_BASIC : PLAN_ADVANCE)
 
+   const FIRST_MODULE = 60000*2
+   const NEXT_MODULES = 24000*2
+
    let price = 0
    let hasModules = activeModules.length > 0
-   if(totalPaid == 0) {
-      // No price
-   } else if(isAnnually) {
-      price = totalPaid == 1 ? 50000 : 50000 + 20000*(totalPaid-1)
-   } else {
-      price = totalPaid == 1 ? 60000 : 60000 + 24000*(totalPaid-1)
+   if(totalPaid > 0) {
+      price = totalPaid == 1 ? FIRST_MODULE : FIRST_MODULE + NEXT_MODULES*(totalPaid-1)
+   }
+   if(isAnnually) {
+      price = price*10/12
    }
    // console.log({hasModules, totalPaid, isAnnually, price})
 
