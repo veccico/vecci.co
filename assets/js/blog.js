@@ -39,7 +39,12 @@ class BlogController {
         if(!article) article = 'error'
         let rootPath = ''
         rootPath = location.hostname == 'localhost' ? '' : 'https://raw.githubusercontent.com/cjortegon/vecci.co/master'
-        this.loadPost(`${rootPath}/blog/posts/${article}.md`, (md) => {
+        let mdPath = `${rootPath}/blog/posts/${article}.md`
+
+        // const articleName = ''
+        // mdPath = `${rootPath}/blog/posts/${articleName}.md`
+        
+        this.loadPost(mdPath, (md) => {
             document.querySelector('#content').innerHTML = marked(md);
             this.fixAll()
         })
