@@ -2,7 +2,7 @@ var fs = require('fs')
 const marked = require('./assets/js/marked.min.js')
 
 const reset = true
-const rootPath = './web/blog'
+const rootPath = './blog'
 
 function invalidate() {
     return new Promise((resolve) => {
@@ -11,6 +11,7 @@ function invalidate() {
                 const parts = f.split('.')
                 return parts.length == 2 && parts[1] == 'md' ? checkBlogPost(f) : null
             }).filter(f => f)
+            // console.log(posts)
 
             let postsWithInfo = filterBlogPosts(posts)
             const postsWithMeta = posts.map(p => {
