@@ -410,7 +410,7 @@
         <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="news" onclick="onToggleModule(event);">
-                <label for="">Comunicación</label>
+                <label for="">Comunicación y Paquetes</label>
             <span></span>
             </button>
         </div>
@@ -430,8 +430,15 @@
         </div>
         <div class="col-50">
             <button class="accordion">
-            <input type="checkbox" id="polls" onclick="onToggleModule(event);">
-                <label for="">Encuestas y Votaciones **</label>
+            <input type="checkbox" id="pqrs" onclick="onToggleModule(event);">
+                <label for="">PQRS</label>
+            <span></span>
+            </button>
+        </div>
+        <div class="col-50">
+            <button class="accordion">
+            <input type="checkbox" id="incidents" onclick="onToggleModule(event);">
+                <label for="">Bitácora o Minuta **</label>
             <span></span>
             </button>
         </div>
@@ -447,9 +454,9 @@
     </div>
     <div class="full" style="margin-bottom: 10px;">
       <div class="pricing-policy">
-        <span class="pricing-policy-bullet">*</span> <span>Incluido por la compra del módulo de Comunicación o Cartera</span>
+        <span class="pricing-policy-bullet">*</span> <span>Incluido por la compra del módulo de Comunicación, Cartera o PQRS</span>
         <br/>
-        <span class="pricing-policy-bullet">**</span> <span>Incluido por la compra de 3 módulos</span>
+        <span class="pricing-policy-bullet">**</span> <span>Incluido por la compra del módulo de Citofonía o Autorizaciones</span>
         <br/>
         <span class="pricing-policy-bullet">***</span> <span>Incluido en todos los paquetes</span>
       </div>
@@ -471,13 +478,6 @@
             <button class="accordion">
             <input type="checkbox" id="reservations" onclick="onToggleModule(event);">
                 <label for="">Reserva de espacios</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="pqrs" onclick="onToggleModule(event);">
-                <label for="">PQRS</label>
             <span></span>
             </button>
         </div>
@@ -509,182 +509,17 @@
           <span></span>
           </button>
         </div>
-
-        <!-- <div class="col-50">
+        <div class="col-50">
             <button class="accordion">
-            <input type="checkbox" id="directory" disabled onclick="abc();">
-                <label for="">Directorio</label>
+            <input type="checkbox" id="polls" onclick="onToggleModule(event);">
+                <label for="">Encuestas y Votaciones</label>
             <span></span>
             </button>
         </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="recurrentvisits" disabled onclick="abc();">
-                <label for="">Visitas recurrentes</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="createvisits" disabled onclick="abc();">
-                <label for="">Minuta de visitas</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="securitylog" disabled onclick="abc();">
-                <label for="">Minuta de seguridad</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="vehicles" disabled onclick="abc();">
-                <label for="">Gestión de vehículos</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="petitions" disabled onclick="abc();">
-                <label for="">Peticiones al administrador</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="communities" disabled onclick="abc();">
-                <label for="">Comunidades</label>
-            <span></span>
-            </button>
-        </div>-->
-
-       <!-- <div class="col-50">
-        <button class="accordion">
-          <input type="checkbox" id="Modulo_3" onclick="abc();">
-	        <label for="color_c"> Firma Digital y Gestión Documental</label>
-          <span></span>
-         </button>
-       </div>
-       
-         <div class="col-50">
-          <button class="accordion">  
-            <input type="checkbox" id="Modulo_5" onclick="abc();">
-            <label for="color_e">Gestión de Desempeño </label>
-            <span></span>
-          </button>
-         </div>
-         
-         <div class="col-50">
-          <button class="accordion" onclick="mostra_btn01()">  
-            <input type="checkbox" id="Modulo_10" onclick="abc();">
-            <label for="color_j"> Capacitaciones-LMS </label>
-            <span></span>
-          </button>
-         </div>
-         
-         <div class="col-50">
-          <button class="accordion">
-            <input type="checkbox" id="Modulo_4" onclick="abc();">
-            <label for="color_d">Comunicaciones y Reconocimiento </label>
-            <span></span>
-          </button>
-         </div>
-       
-         <div class="col-50">
-          <button class="accordion"> 
-            <input type="checkbox" id="Modulo_6" onclick="abc();">
-            <label for="color_f">Beneficios Laborales </label>
-            <span></span>
-          </button>
-         </div>
-        
-         <div class="col-50"> 
-          <button class="accordion">  
-            <input type="checkbox" id="Modulo_8" onclick="abc();">
-            <label for="color_h">Encuestas </label>
-            <span></span>
-          </button>
-         </div>
-
-         <div class="col-50">
-          <button class="accordion">  
-            <input type="checkbox" id="Modulo_7" onclick="abc();">
-            <label for="color_g">Reclutamiento y Selección </label>
-            <span></span>
-          </button>
-         </div>
-        
-         <div class="col-50"> 
-          <button class="accordion">  
-            <input type="checkbox" id="Modulo_8" onclick="abc();">
-            <label for="color_h">Encuestas </label>
-            <span></span>
-          </button>
-         </div>
-
-         <div class="col-50">
-          <button class="accordion">  
-            <input type="checkbox" id="Modulo_7" onclick="abc();">
-            <label for="color_g">Reclutamiento y Selección </label>
-            <span></span>
-          </button>
-         </div> -->
 
     </div>
 
-</div></div></div>
-
-    <!-- <div class=" col-100 Seccion_modulos addoms">
-       <div class="titulo col-100 lazy-background visible">
-         <h2>Addons</h2>
-         <p>Agrega los <b>complementos</b> que quierass</p>
-       </div>
-        <div class="contenido col-100">
-  
-     <div class="full addons">
-      <div class="full">
-      
-       <div class="col-50">
-        <button class="accordion">
-          <input type="checkbox" id="Addons_1" onclick="abc();">
-	        <label for="workflows">Workflows</label>
-          <span></span>
-        </button>
-       </div>
-      
-       <div class="col-50">
-        <button class="accordion">  
-          <input type="checkbox" id="Addons_5" onclick="abc();">
-	        <label for="saml">Autenticación Single Sign On (SSO)</label>
-          <span></span>
-        </button>
-       </div>
-       
-       <div class="col-50">
-        <button class="accordion">  
-          <input type="checkbox" id="Addons_7" onclick="abc();">
-	        <label for="saml">API</label>
-          <span></span>
-        </button>
-       </div>
-
-       <div class="col-50">
-        <button class="accordion" id="btn_Addons_8" style="display:none;">  
-          <input type="checkbox" id="Addons_8" onclick="abc();">
-	        <label for="saml">
-           BukPlay
-          </label>
-          <span></span>
-        </button>
-       </div>
-      </div>
-
-      </div>
-       </div>
-    </div> -->
-  </div> 
+</div></div></div></div> 
   
   <div class="span1 ordenador"></div>
   
@@ -756,9 +591,7 @@
   <div class="boxer">
     <div class="span12">
       <h2>Preguntas Frecuentes</h2>
-      
 <div class="accordions_n">
-  
 
 <button class="accordion_n">
   <span>1</span> 
@@ -767,16 +600,16 @@
 <div class="panel_n">
 <p><span>Pagas solo por la cantidad de módulos que quieras usar, no importa la cantidad de casas o apartamentos que tenga tu conjunto. Cuando realizas el pago anual se descuenta el valor de 2 meses.</span></p>
 </div>
-<div class="border-panel_n"> </div>   
+<div class="border-panel_n"> </div>
 
 <button class="accordion_n">
   <span>2</span> 
   <h3>¿Cúal es la frecuencia del cobro?</h3> 
 </button>
 <div class="panel_n">
-<p><span>Puedes pagar mensualmente o con una tarifa especial si el pago es anual. Escríbenos.</span></p>
+<p><span>El pago puede ser anual (el más popular ya que se descuentan 2 meses) o mensual inscribiendo una tarjeta de crédito para realizar el pago recurrente según la cantidad de módulos que hayas escogido.</span></p>
 </div>
-<div class="border-panel_n"> </div>   
+<div class="border-panel_n"> </div>
 
 <button class="accordion_n">
   <span>3</span> 
@@ -785,7 +618,7 @@
 <div class="panel_n">
 <p><span>La cantidad de usuarios es ilimitada, solo cobramos por la subscripción a la unidad residencial, y el uso de la aplicación para todos los residentes, copropietarios, porteros es gratuito.</span></p>
 </div>
-<div class="border-panel_n"> </div>   
+<div class="border-panel_n"> </div>
 
 <button class="accordion_n">
   <span>4</span> 
@@ -794,7 +627,7 @@
 <div class="panel_n">
 <p><span>Adquiriendo cualquiera de nuestros planes, recibes hasta 2 meses gratis para probar cada uno de los módulos.</span></p>
 </div>
-<div class="border-panel_n"> </div>   
+<div class="border-panel_n"> </div>
 
 <button class="accordion_n">
   <span>5</span> 
@@ -803,7 +636,7 @@
 <div class="panel_n">
 <p><span>Sí. Se te asignará un asesor que te guiará durante todo el proceso sin costo adicional, pagando la subscripción.</span></p>
 </div>
-<div class="border-panel_n"> </div>   
+<div class="border-panel_n"> </div>
 
 <button class="accordion_n">
   <span>6</span> 
@@ -812,7 +645,7 @@
 <div class="panel_n">
 <p><span>Sí. Capacitamos al administrador, porteros y residentes. También tenemos una amplia colección de videos para aprender a usar cada módulo, disponible en esta página y dentro de la aplicación.</span></p>
 </div>
-<div class="border-panel_n"> </div>   
+<div class="border-panel_n"> </div>
 
 <button class="accordion_n">
   <span>7</span> 
@@ -830,17 +663,77 @@
 <div class="panel_n">
 <p><span>Sí. Adquiriendo cualquier plan tienes acceso a la aplicación para residentes totalmente gratis. El administrador del conjunto debe aprobar el registro de los usuarios para que tengan acceso.</span></p>
 </div>
-<div class="border-panel_n"> </div>  
- 
+<div class="border-panel_n"> </div>
 
-</div>   
-  </div>
- </div>
+<button class="accordion_n">
+  <span>9</span> 
+  <h3>¿Tienen aplicación para residentes?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Sí. Adquiriendo cualquier plan tienes acceso a la aplicación para residentes totalmente gratis. El administrador del conjunto debe aprobar el registro de los usuarios para que tengan acceso.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+<button class="accordion_n">
+  <span>10</span> 
+  <h3>¿Qué es el módulo de Comunicación?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Con este módulo puedes el Administrador puede enviar notificaciones a los Residentes como un corte de agua, una medida de seguridad, etc. Además los todos pueden compartir mensajes con la copropiedad (aproabods por el administrador), con imágenes para reportar una mascota perdida, promover un micro-negocio o compartir información valiosa con la comunidad. Además los Porteros también pueden notificar a los Residentes sobre la llegada de Paquetes y Correspondencia.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+<button class="accordion_n">
+  <span>11</span> 
+  <h3>¿Cómo funciona la Citofonía virutal?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Para adquirir este servicio debes contar con un celular con minutos para realizar las llamadas. Permite crear hasta 5 teléfonos por apartamento y facilita tener los datos actualizados, así como guardar historial de las llamadas realizadas.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+<button class="accordion_n">
+  <span>12</span> 
+  <h3>¿Qué son las autorizaciones por código QR?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Mediante un código QR que sólo pueden crear los Residentes, es posible autorizar visitas de personas para que el ingreso se haga muy rápido y no requiera de una llamada. Los códigos QR son de 1 solo uso y pueden almacenar los datos del visitante de forma encriptada para que en portería se haga la respectiva validación de identidad.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+<button class="accordion_n">
+  <span>13</span> 
+  <h3>¿Puedo usar Vecci para controlar la Correspondencia?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Si. Mediante el módulo de Comunicación y Paquetes los porteros pueden tomarle foto a la correspondencia recibida y dejar evidencia de la hora y el estado en que recibieron algo. Los administradores pueden revisar esta evidencia para resolver cualquier inconveniente.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+<button class="accordion_n">
+  <span>14</span> 
+  <h3>¿Cuanto espacio tengo con el módulo de Archivos?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Todas las cuentas tienen hasta 5Gb de almacenamiento, que es suficiente para compartir fotos y PDFs en un sistema de archivos ordenado como el que manejas en el computador. A esta información pueden acceder todos los usuarios activos y es útil para subir actas del consejo, documentos para revisión en la asamblea o estados financieros de la copropiedad.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+<button class="accordion_n">
+  <span>15</span> 
+  <h3>¿Qué hago cuando un Residente se vaya?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Es importante que el Administrador remueva el acceso a la aplicación a los Residentes desde el menú de Administración. Es responsabilidad de que estos usuarios permanezcan con acceso a recursos importantes dentro de la aplicación.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+</div></div></div>
 <div class="full figura">
       <svg class="curva" xmlns="http://www.w3.org/2000/svg" width="1943.421" height="89.711" viewBox="0 0 1943.421 89.711"><path d="M-2982-762.965s327.01-96.63,961.589-37.954,981.833-9.477,981.833-9.477v80.281H-2982Z" transform="translate(2982 819.826)" fill="#fff"></path></svg>
-    </div>  
+    </div>
 </div>
-       
+
 <script>
 var acc = document.getElementsByClassName("accordion_n");
 var i;

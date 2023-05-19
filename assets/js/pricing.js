@@ -116,7 +116,7 @@ function CalculateFactorAdelantos(number_collaborators) {
 var totalResidences = 80
 var isAnnually = true //basicActive
 var activeModules = ['intercom']
-const paidModules = ['intercom','invoices','news','visits']
+const paidModules = ['intercom','invoices','news','visits','pqrs']
 var totalPaid = 1
 
 let RESIDENCE_PRICE = 2300
