@@ -6,8 +6,8 @@ class VideosController {
         this.videos = [
             '731984075',
             '733090690',
-            '731985798',
-            '743620449',
+            '824965933',
+            '817031561',
         ]
         this.vimeoVideos = []
         this.hasLoaded = false
