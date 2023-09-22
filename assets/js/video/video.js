@@ -4,10 +4,11 @@ class VideosController {
     constructor() {
         this.url = ''
         this.videos = [
-            '731984075',
             '733090690',
             '824965933',
             '817031561',
+            '777840525',
+            '731984075',
         ]
         this.vimeoVideos = []
         this.hasLoaded = false
