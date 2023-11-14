@@ -3,6 +3,7 @@
 <meta name="pp" content="https://avatars.githubusercontent.com/u/6712411?v=4" />
 <meta name="language" content="es" />
 <meta name="topic" content="Pagos finanzas digital" />
+<meta name="image" content="https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/cuentas-de-cobro.png">
 
 # Paga el recibo de administración desde el teléfono
 

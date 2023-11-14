@@ -3,6 +3,7 @@
 <meta name="pp" content="https://avatars.githubusercontent.com/u/6712411?v=4" />
 <meta name="language" content="es" />
 <meta name="topic" content="Seguridad" />
+<meta name="image" content="https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/vigilancia-por-video.jpg">
 
 # Importancia de la seguridad en tu unidad
 
