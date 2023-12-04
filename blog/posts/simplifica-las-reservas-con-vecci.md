@@ -2,9 +2,9 @@
 <meta name="author" content="Camilo Ortegón" />
 <meta name="pp" content="https://avatars.githubusercontent.com/u/6712411?v=4" />
 <meta name="language" content="es" />
-<meta name="topic" content="Reservas Automatización Eficiencia Espacios Comunes Gestión" />
+<meta name="topic" content="Reservas" />
 
-# Simplifica la reserva de espacios con Vecci
+# Simplifica la reserva de espacios
 
 Cambia la forma tradicional de reservar espacios usando una minuta, autorizaciones por escrito, y mucho tiempo perdido hablando por Whatsapp. La tecnología de Vecci está aquí para ayudarte a hacer que este proceso sea mucho más rápido y sencillo para residentes, proteros y administradores.
 
