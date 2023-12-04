@@ -6,7 +6,10 @@ const rootPath = './blog'
 
 function invalidate() {
     return new Promise((resolve) => {
-        fs.readdir(`${rootPath}/posts`, async (err, files) => {
+        const fullPath = `${rootPath}/posts`
+        console.log(`Reading ${fullPath}`)
+        fs.readdir(fullPath, async (err, files) => {
+            console.log('Total files: '+(files ? files.length : 0))
             let posts = files.map(f => {
                 const parts = f.split('.')
                 return parts.length == 2 && parts[1] == 'md' ? checkBlogPost(f) : null
@@ -78,6 +81,7 @@ function alterPageWithMetadata(html, meta) {
 }
 
 function createBlogHome(posts) {
+    console.log('Creating blog home')
     try {
         posts = posts.sort((a, b) => {
             return new Date(b.date).getTime() - new Date(a.date).getTime();
