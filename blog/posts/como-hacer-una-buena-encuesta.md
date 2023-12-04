@@ -29,4 +29,4 @@ Algunos consejos para realizar una buena encuesta demográfica:
 
 7. Analiza los resultados: analiza los datos para extraer conclusiones y tomar decisiones informadas en función de los resultados obtenidos.
 
-Si tienes preguntas de cómo funcionan nuestros planes, escríbenos a [info@vecci.co](mailto:info@vecci.co).
+Si tienes preguntas escríbenos a [info@vecci.co](mailto:info@vecci.co).
