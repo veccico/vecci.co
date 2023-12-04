@@ -8,6 +8,8 @@
 
 Cambia la forma tradicional de reservar espacios usando una minuta, autorizaciones por escrito, y mucho tiempo perdido hablando por Whatsapp. La tecnología de Vecci está aquí para ayudarte a hacer que este proceso sea mucho más rápido y sencillo para residentes, proteros y administradores.
 
+![70;;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/reservation-tenis-court.png)
+
 ### Ventajas de tener un sistema de reservas digital
 
 1. Reservas en Tiempo Real
@@ -29,5 +31,3 @@ Vecci permite personalizar aspectos del sistema para adaptarse a las necesidades
 5. Comunicación Efectiva
 
 La plataforma facilita una comunicación fluida entre los residentes y los administradores, ofreciendo un canal directo para consultas y sugerencias.
-
-![70;;c](https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/reservation-tenis-court.png)
