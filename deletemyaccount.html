@@ -6,13 +6,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/deletemyaccount.css">
     <!-- Scripts -->
     <script src="assets/js/http-helper.js"></script>
+    <script src="assets/js/deletemyaccount.js"></script>
 </head>
 <body>
     <header>
         <h1>Eliminar mi cuenta</h1>
     </header>
     <main>
-        <section class="remove-account">
+        <section class="remove-account" id="remove-account">
             <h2>Solicitar que borren los datos de mi cuenta</h2>
             <form action="javascript:void(0);" method="post">
                 <label id="email-label" for="email">Correo</label>
@@ -25,11 +26,18 @@
             </form>
             <p id="final-message" class="hidden">Revisa tu correo electrónico para confirmar la eliminación de tu cuenta.</p>
         </section>
+        <section class="remove-account hidden" id="remove-account-confirmation">
+            <p>Los datos de tu cuenta serán eliminados en 90 días.</p>
+            <p>Para reactivar tu cuenta solo debes iniciar sesión en la aplicación antes de cumplir ese periodo.</p>
+        </section>
     </main>
     <footer>
         <p>&copy; 2023 Vecci</p>
     </footer>
     <script>
+        window.onload = function() {
+            checkDeleteConfirmation();
+        }
         function onSubmit() {
             var label = document.getElementById("email-label");
             label.innerHTML = "Enviando...";
@@ -46,7 +54,7 @@
                 document.getElementById("final-message").classList.remove("hidden");
             }, 900);
 
-            fetchCustom("DELETE", "https://449gwidd80.execute-api.us-east-1.amazonaws.com/prod/client/vecci/account")
+            fetchCustom("DELETE", "https://449gwidd80.execute-api.us-east-1.amazonaws.com/prod/client/vecci/account", {email})
             .then((response) => {
                 console.log(response)
             })

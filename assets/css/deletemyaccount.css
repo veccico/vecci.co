@@ -38,7 +38,6 @@ form label, form input, form button {
 
 form button {
     background-color: #26C187;
-    width: 50%;
     color: white;
     border: none;
     cursor: pointer;
@@ -49,6 +48,19 @@ footer {
     padding: 1em 0;
     background-color: #131340;
     color: white;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+    main {
+        width: 95%; /* Increase width for smaller screens */
+    }
+
+    form button {
+        width: 100%; /* Make button full width on mobile */
+    }
+
+    /* Other mobile-specific styles can be added here */
 }
 
 @keyframes removeEmailField {
