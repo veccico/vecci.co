@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Remove My Account</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/deletemyaccount.css">
+    <!-- Scripts -->
+    <script src="assets/js/http-helper.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Eliminar mi cuenta</h1>
+    </header>
+    <main>
+        <section class="remove-account">
+            <h2>Solicitar que borren los datos de mi cuenta</h2>
+            <form action="javascript:void(0);" method="post">
+                <label id="email-label" for="email">Correo</label>
+                <input type="text" id="email" name="email" required>
+                <table style="text-align: center;">
+                    <tr><td>
+                        <button id="submit-button" onclick="onSubmit()" type="submit">Enviar solicitud</button>
+                    </td></tr>
+                </table>
+            </form>
+            <p id="final-message" class="hidden">Revisa tu correo electrónico para confirmar la eliminación de tu cuenta.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Vecci</p>
+    </footer>
+    <script>
+        function onSubmit() {
+            var label = document.getElementById("email-label");
+            label.innerHTML = "Enviando...";
+            var emailField = document.getElementById("email");
+            var email = emailField.value;
+            if (email == "") return;
+
+            // Animation to remove the email field
+            emailField.style.animation = "removeEmailField 1s";
+            setTimeout(() => {
+                emailField.style.display = "none";
+                label.innerHTML = "¡Enviado!";
+                document.getElementById("submit-button").style.display = "none";
+                document.getElementById("final-message").classList.remove("hidden");
+            }, 900);
+
+            fetchCustom("DELETE", "https://449gwidd80.execute-api.us-east-1.amazonaws.com/prod/client/vecci/account")
+            .then((response) => {
+                console.log(response)
+            })
+        }
+    </script>
+</body>
+</html>

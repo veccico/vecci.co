@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #131340;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1E79FB;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    width: 80%;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.remove-account h2 {
+    color: #1a1a1a;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form label, form input, form button {
+    width: 95%;
+    padding: 0.5em;
+}
+
+form button {
+    background-color: #26C187;
+    width: 50%;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #131340;
+    color: white;
+}
+
+@keyframes removeEmailField {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    90% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        display: none;
+    }
+}
+
+.hidden {
+    display: none;
+}
