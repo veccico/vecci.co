@@ -171,8 +171,8 @@
                 <ul class="nav">
                 <li class="scroll-to-section"><a href="/">Inicio</a></li>
                 <li><a href="/blog.html">Blog</a></li>
-                <li class="scroll-to-section"><a href="/#services">Servicios</a></li>
-                <li class="scroll-to-section"><a href="/tutorials.html">Tutoriales</a></li>
+                <!-- <li class="scroll-to-section"><a href="/#services">Servicios</a></li> -->
+                <!-- <li class="scroll-to-section"><a href="/tutorials.html">Tutoriales</a></li> -->
                 <!-- <li class="scroll-to-section"><a href="#about">About</a></li> -->
                 <li class="scroll-to-section"><a href="#" class="active">Precio</a></li>
                 <!-- <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li> -->
@@ -295,7 +295,7 @@
         <div class="span6">
           <div class="full texto" style="padding-top: 20px;">
             <h1>Bienvenido al<br> cotizador de Vecci</h1>
-            <p>Nuestros precios son transparentes y flexibles, para que puedas <strong>construir la mejor solución</strong> para tu conjunto.</p>
+            <p>Puedes probar todas nuestras <strong>soluciones</strong> antes de subscribirte.</p>
             
           </div>
         </div>
@@ -349,43 +349,30 @@
          <p>Indica cuantas <b>casas o apartamentos</b> hay en tu conjunto residencial.</p>
        </div>
         <div class="contenido col-100">
-         <input class="" name="residences" id="residences" value="80" type="number" placeholder=" 0 " min="1" max="1000" oninput="onChangeUnits();"> 
+         <input class="" name="residences" id="residences" value="80" type="number" placeholder=" 0 " min="1" max="1000" oninput="onChangeUnits();" />
        </div>
     </div>
      
     <div class=" col-100 gestion_de_personas">
-       <div class="titulo col-100 lazy-background visible">
+       <!-- <div class="titulo col-100 lazy-background visible">
          <h2>Modo de pago</h2>
          <p>Prueba todo <b>por 2 meses</b> adquiriendo cualquier plan</p>
-       </div>
+       </div> -->
         <div class="contenido col-100" id="myDIV">
         <label class="lbl-checkbox col-45 btn active">
          <input class="check1" aria-label="an appropriate label" type="radio" id="basico1" value="basico" onclick="onChangePlan('annual');" name="Gestion_de_personas">
           <h3><b>Pago anual</b> <span></span></h3>
-          <!-- <div class="cuadro full">
-          <ul class="full ">
-            <li>* Facturas de administración</li>
-          </ul>
-          </div> -->
+          
        </label>
-     
-       <label class="lbl-checkbox col-45 btn">
-         <input class="check1" aria-label="an appropriate label" type="radio" id="avanzado1" value="avanzado" onclick="onChangePlan('monthly');" name="Gestion_de_personas">
-         <h3><b>Pago mensual</b> <span></span></h3>
-         <!-- <div class="cuadro full">
-         <ul class="full">
-            <li>Todo lo del plan básico</li>
-         </ul>
-         </div>    -->
-       </label>
+       <p>* Escribenos para financiamiento gratuito si administras varias unidades.</p>
 
-</div>  
-</div>      
+</div>
+</div>
    
      <div class=" col-100 Seccion_modulos">
        <div class="titulo col-100 lazy-background visible">
          <h2>Módulos</h2>
-         <p>Selecciona los <b>módulos</b> que necesitas</p>
+         <p>¿Cuales <b>módulos</b> te interesan más?</p>
        </div>
        <div class="contenido col-100">
   
@@ -394,30 +381,30 @@
     <div class="full">
        
         <div class="col-50">
-            <button class="accordion active">
-            <input type="checkbox" id="intercom" checked onclick="onToggleModule(event);">
-                <label for="">Citofonía</label>
+            <button class="accordion">
+            <input type="checkbox" id="intercom" onclick="onToggleModule(event);">
+                <label for="">Citofonía virtual</label>
             <span></span>
             </button>
         </div>
         <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="invoices" onclick="onToggleModule(event);">
-                <label for="">Cartera y Pagos</label>
+                <label for="">Cuentas de cobro  de administración</label>
             <span></span>
             </button>
         </div>
         <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="news" onclick="onToggleModule(event);">
-                <label for="">Comunicación y Paquetes</label>
+                <label for="">Correspondencia y paquetería</label>
             <span></span>
             </button>
         </div>
         <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="files" onclick="onToggleModule(event);">
-                <label for="">Archivos *</label>
+                <label for="">Recaudos por Nequi</label>
             <span></span>
             </button>
         </div>
@@ -438,7 +425,7 @@
         <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="incidents" onclick="onToggleModule(event);">
-                <label for="">Bitácora o Minuta **</label>
+                <label for="">Bitácora o Minuta</label>
             <span></span>
             </button>
         </div>
@@ -446,21 +433,27 @@
         <div class="col-50">
           <button class="accordion">
           <input type="checkbox" id="panic" onclick="onToggleModule(event);">
-              <label for="">Botón de pánico ***</label>
+              <label for="">Botón de pánico</label>
           <span></span>
           </button>
         </div>
 
+        <div class="col-50">
+          <button class="accordion">
+          <input type="checkbox" id="polls" onclick="onToggleModule(event);">
+              <label for="">Encuestas y Votaciones</label>
+          <span></span>
+          </button>
+      </div>
+
     </div>
     <div class="full" style="margin-bottom: 10px;">
       <div class="pricing-policy">
-        <span class="pricing-policy-bullet">*</span> <span>Incluido por la compra del módulo de Comunicación, Cartera o PQRS</span>
-        <br/>
-        <span class="pricing-policy-bullet">**</span> <span>Incluido por la compra del módulo de Citofonía o Autorizaciones</span>
-        <br/>
-        <span class="pricing-policy-bullet">***</span> <span>Incluido en todos los paquetes</span>
+        <span class="pricing-policy-bullet">*</span> <span>Todos los módulos están incluidos en tu subscripción anual.</span>
       </div>
     </div>
+
+    
     <div class="full">
 
         <div class="col-50">
@@ -477,21 +470,14 @@
         <div class="col-50">
             <button class="accordion">
             <input type="checkbox" id="reservations" onclick="onToggleModule(event);">
-                <label for="">Reserva de espacios</label>
-            <span></span>
-            </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="files" onclick="onToggleModule(event);">
-                <label for="">Integración con Contabilidad</label>
+                <label for="">Reserva de espacios con IA</label>
             <span></span>
             </button>
         </div>
         <div class="col-50">
           <button class="accordion">
           <input type="checkbox" id="whatsapp" onclick="onToggleModule(event);">
-              <label for="">Integración con Whatsapp</label>
+              <label for="">Envío de mensajes por Whatsapp</label>
           <span></span>
           </button>
         </div>
@@ -505,16 +491,9 @@
         <div class="col-50">
           <button class="accordion">
           <input type="checkbox" id="asamblea" onclick="onToggleModule(event);">
-              <label for="">Asamblea virtual</label>
+              <label for="">Pagos de administración diferidos</label>
           <span></span>
           </button>
-        </div>
-        <div class="col-50">
-            <button class="accordion">
-            <input type="checkbox" id="polls" onclick="onToggleModule(event);">
-                <label for="">Encuestas y Votaciones</label>
-            <span></span>
-            </button>
         </div>
 
     </div>
@@ -543,7 +522,9 @@
       </div>
       <div class="col-100 " id="your-discount" style="padding-top: 20px; display: block;">
         <div class="col-100" id="attain-discount" style="display: block;">
-          <p class="discount-txt">Arma el plan a <span id="attain-modules">tu medida</span></p>
+          <p class="discount-txt">50% de <span id="attain-modules">descuento</span> en el primer año.</p>
+          <br/>
+          <p class="discount-txt">¿Tienes más de 5 conjuntos? Obten una oferta especial.</p>
         </div>
         <div class="col-100" id="discount-message">
           <p class="discount-txt">Tienes un descuento del: <span id="discount-value"></span></p>
@@ -593,27 +574,27 @@
       <h2>Preguntas Frecuentes</h2>
 <div class="accordions_n">
 
-<button class="accordion_n">
+<!-- <button class="accordion_n">
   <span>1</span> 
   <h3>¿Cómo calculan el precio?</h3> 
 </button>
 <div class="panel_n">
 <p><span>Pagas solo por la cantidad de módulos que quieras usar, no importa la cantidad de casas o apartamentos que tenga tu conjunto. Cuando realizas el pago anual se descuenta el valor de 2 meses.</span></p>
 </div>
-<div class="border-panel_n"> </div>
+<div class="border-panel_n"> </div> -->
 
 <button class="accordion_n">
-  <span>2</span> 
+  <span>1</span> 
   <h3>¿Cúal es la frecuencia del cobro?</h3> 
 </button>
 <div class="panel_n">
-<p><span>El pago puede ser anual (el más popular ya que se descuentan 2 meses) o mensual inscribiendo una tarjeta de crédito para realizar el pago recurrente según la cantidad de módulos que hayas escogido.</span></p>
+<p><span>La subscripción tiene una duración de 1 año y debe renovarse antes de finalizar para que todos los usuarios sigan teniendo acceso. Si tienes más de una unidad residencial puedes acceder a financiamiento gratuito, escríbenos.</span></p>
 </div>
 <div class="border-panel_n"> </div>
 
 <button class="accordion_n">
-  <span>3</span> 
-  <h3>¿Cuántos usuarios están incluidos?</h3> 
+  <span>2</span> 
+  <h3>¿Cuántos usuarios pueden usar la app?</h3> 
 </button>
 <div class="panel_n">
 <p><span>La cantidad de usuarios es ilimitada, solo cobramos por la subscripción a la unidad residencial, y el uso de la aplicación para todos los residentes, copropietarios, porteros es gratuito.</span></p>
@@ -621,34 +602,34 @@
 <div class="border-panel_n"> </div>
 
 <button class="accordion_n">
-  <span>4</span> 
+  <span>3</span> 
   <h3>¿Ofrecen un periodo de prueba?</h3> 
 </button>
 <div class="panel_n">
-<p><span>Adquiriendo cualquiera de nuestros planes, recibes hasta 2 meses gratis para probar cada uno de los módulos.</span></p>
+<p><span>Puedes probar todos los módulos de la aplicación antes de iniciar la subscripción. Sin compromiso, sin pagos por adelantado.</span></p>
 </div>
 <div class="border-panel_n"> </div>
 
-<button class="accordion_n">
+<!-- <button class="accordion_n">
   <span>5</span> 
   <h3>¿La implementación está incluida en la mensualidad?</h3> 
 </button>
 <div class="panel_n">
 <p><span>Sí. Se te asignará un asesor que te guiará durante todo el proceso sin costo adicional, pagando la subscripción.</span></p>
 </div>
-<div class="border-panel_n"> </div>
+<div class="border-panel_n"> </div> -->
 
-<button class="accordion_n">
+<!-- <button class="accordion_n">
   <span>6</span> 
   <h3>¿Las capacitaciones están incluidas?</h3> 
 </button>
 <div class="panel_n">
 <p><span>Sí. Capacitamos al administrador, porteros y residentes. También tenemos una amplia colección de videos para aprender a usar cada módulo, disponible en esta página y dentro de la aplicación.</span></p>
 </div>
-<div class="border-panel_n"> </div>
+<div class="border-panel_n"> </div> -->
 
 <button class="accordion_n">
-  <span>7</span> 
+  <span>4</span> 
   <h3>¿El precio incluye nuevas funcionalidades y actualizaciones?</h3> 
 </button>
 <div class="panel_n">
@@ -657,34 +638,16 @@
 <div class="border-panel_n"> </div>
 
 <button class="accordion_n">
-  <span>8</span> 
+  <span>5</span> 
   <h3>¿Tienen aplicación para residentes?</h3> 
 </button>
 <div class="panel_n">
-<p><span>Sí. Adquiriendo cualquier plan tienes acceso a la aplicación para residentes totalmente gratis. El administrador del conjunto debe aprobar el registro de los usuarios para que tengan acceso.</span></p>
+<p><span>Sí. Los residentes ingresan con su correo electrónico, el administrador debe aprobar cada correo o subir una lista con los correos que tienen acceso.</span></p>
 </div>
 <div class="border-panel_n"> </div>
 
 <button class="accordion_n">
-  <span>9</span> 
-  <h3>¿Tienen aplicación para residentes?</h3> 
-</button>
-<div class="panel_n">
-<p><span>Sí. Adquiriendo cualquier plan tienes acceso a la aplicación para residentes totalmente gratis. El administrador del conjunto debe aprobar el registro de los usuarios para que tengan acceso.</span></p>
-</div>
-<div class="border-panel_n"> </div>
-
-<button class="accordion_n">
-  <span>10</span> 
-  <h3>¿Qué es el módulo de Comunicación?</h3> 
-</button>
-<div class="panel_n">
-<p><span>Con este módulo puedes el Administrador puede enviar notificaciones a los Residentes como un corte de agua, una medida de seguridad, etc. Además los todos pueden compartir mensajes con la copropiedad (aproabods por el administrador), con imágenes para reportar una mascota perdida, promover un micro-negocio o compartir información valiosa con la comunidad. Además los Porteros también pueden notificar a los Residentes sobre la llegada de Paquetes y Correspondencia.</span></p>
-</div>
-<div class="border-panel_n"> </div>
-
-<button class="accordion_n">
-  <span>11</span> 
+  <span>6</span> 
   <h3>¿Cómo funciona la Citofonía virutal?</h3> 
 </button>
 <div class="panel_n">
@@ -693,7 +656,7 @@
 <div class="border-panel_n"> </div>
 
 <button class="accordion_n">
-  <span>12</span> 
+  <span>7</span> 
   <h3>¿Qué son las autorizaciones por código QR?</h3> 
 </button>
 <div class="panel_n">
@@ -702,7 +665,7 @@
 <div class="border-panel_n"> </div>
 
 <button class="accordion_n">
-  <span>13</span> 
+  <span>8</span> 
   <h3>¿Puedo usar Vecci para controlar la Correspondencia?</h3> 
 </button>
 <div class="panel_n">
@@ -711,16 +674,25 @@
 <div class="border-panel_n"> </div>
 
 <button class="accordion_n">
+  <span>9</span> 
+  <h3>¿Cuentan con pasarela de pagos para pagar la administración?</h3> 
+</button>
+<div class="panel_n">
+<p><span>Si. Escribenos para que configuremos tu cuenta de ahorros para recibir los pagos. Actualmente permitimos pagos por Nequi y próximamente con tarjeta de crédito y PSE.</span></p>
+</div>
+<div class="border-panel_n"> </div>
+
+<!-- <button class="accordion_n">
   <span>14</span> 
   <h3>¿Cuanto espacio tengo con el módulo de Archivos?</h3> 
 </button>
 <div class="panel_n">
 <p><span>Todas las cuentas tienen hasta 5Gb de almacenamiento, que es suficiente para compartir fotos y PDFs en un sistema de archivos ordenado como el que manejas en el computador. A esta información pueden acceder todos los usuarios activos y es útil para subir actas del consejo, documentos para revisión en la asamblea o estados financieros de la copropiedad.</span></p>
 </div>
-<div class="border-panel_n"> </div>
+<div class="border-panel_n"> </div> -->
 
 <button class="accordion_n">
-  <span>15</span> 
+  <span>10</span> 
   <h3>¿Qué hago cuando un Residente se vaya?</h3> 
 </button>
 <div class="panel_n">

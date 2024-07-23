@@ -131,10 +131,11 @@ function onChangePlan(type) {
 }
 function onChangeUnits() {
     const residences = parseInt(document.querySelector('#residences').value)
-    totalResidences = Math.max(10, residences)
+    totalResidences = Math.max(1, residences)
     calculatePrice()
 }
 function onToggleModule(e) {
+   return
    const mod = e.target.id
    const input = document.querySelector('#'+mod)
    if(input.checked) {
@@ -152,48 +153,25 @@ function calculatePrice() {
    const resultadoSmall = document.querySelector('#resultado-small')
    const resultadoHint = document.querySelector('#resultado-hint')
 
-   //  const minModules = basicActive ? 3 : MIN_MODULES
-   //  const totalModules = activeModules.length
-
-   //  const extraTrial = totalModules-minModules
-   //  const extraRegular = totalModules-MIN_MODULES
-
-   //  let extraModulesPrice = extraTrial*MODULE_PRICE + (extraTrial > 0 ? RESIDENCE_MODULE_PRICE*totalResidences*extraTrial : 0)
-   //  const fullModulesPrice = extraRegular*MODULE_PRICE + RESIDENCE_MODULE_PRICE*totalResidences*extraRegular
-
-   //  const modulesPrice = Math.max(MIN_MODULES_PRICE, MIN_MODULES_PRICE+fullModulesPrice)
-   //  const price = totalResidences*RESIDENCE_PRICE+modulesPrice
-
-   // const price = totalResidences*RESIDENCE_PRICE+(basicActive ? PLAN_BASIC : PLAN_ADVANCE)
-
    const FIRST_MODULE = 60000*2
    const NEXT_MODULES = 24000*2
 
-   let price = 0
-   let hasModules = activeModules.length > 0
-   if(totalPaid > 0) {
-      price = totalPaid == 1 ? FIRST_MODULE : FIRST_MODULE + NEXT_MODULES*(totalPaid-1)
-   }
-   if(isAnnually) {
-      price = price*10/12
-   }
+   // let price = 0
+   // let hasModules = activeModules.length > 0
+   // if(totalPaid > 0) {
+   //    price = totalPaid == 1 ? FIRST_MODULE : FIRST_MODULE + NEXT_MODULES*(totalPaid-1)
+   // }
+   // if(isAnnually) {
+   //    price = price*10/12
+   // }
    // console.log({hasModules, totalPaid, isAnnually, price})
 
-   if(price && hasModules) {
-      resultado.innerHTML = `$${numberWithCommas(price)}`
-      resultadoSmall.innerHTML = `<p>$${numberWithCommas(Math.ceil(price/Math.max(totalResidences, 1)))} COP por unidad</p>`
-      if(isAnnually) {
-         resultadoHint.innerHTML = `<p>1 pago único: $${numberWithCommas(price*12)} al año</p>`
-      } else {
-         resultadoHint.innerHTML = ''
-      }
-   } else {
-      resultado.innerHTML = hasModules ? `$0` : 'Cotizar'
-      resultadoSmall.innerHTML = '<p>Arma tu plan a la medida</p>'
-      if(hasModules) {
-         resultadoHint.innerHTML = `<p>* Modulos sujetos a adquirir otro plan.</p>`
-      }
-   }
+   let price = 840000
+   let monthPrice = price / 12.0
+   resultado.innerHTML = `$${numberWithCommas(Math.ceil(monthPrice))}`
+   resultadoSmall.innerHTML = `<p>$${numberWithCommas(Math.ceil(monthPrice/Math.max(totalResidences, 1)))} COP por casa al mes</p>`
+   resultadoHint.innerHTML = `<p>1 pago único: $${numberWithCommas(price)} al año</p>`
+   return
 }
 
 function numberWithCommas(x) {
