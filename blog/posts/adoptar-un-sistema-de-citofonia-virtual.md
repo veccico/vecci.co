@@ -5,7 +5,7 @@
 <meta name="topic" content="Lifestyle" />
 <meta name="image" content="https://raw.githubusercontent.com/cjortegon/vecci.co/master/blog/images/contestar-llamada-1.jpg">
 
-# Adoptar un Sistema de Citofonía Virtual en Conjuntos Residenciales
+# Adoptar la Citofonía Virtual en Conjuntos Residenciales
 
 Administrar un conjunto residencial puede ser complicado, especialmente cuando te enfrentas a esos sistemas de citofonía antigüos con cables por todas partes. ¿La buena noticia? Hay una alternativa que hará que todos se pregunten por qué no lo hicimos antes: la citofonía virtual a través de una app para tu móvil.
 
