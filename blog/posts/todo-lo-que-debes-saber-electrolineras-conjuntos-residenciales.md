@@ -4,7 +4,7 @@
 <meta name="language" content="es" />
 <meta name="topic" content="Reservas" />
 
-# Todo lo que debes saber 
+# Estaciones de carga eléctrica en conjuntos residenciales
 
 El auge de los vehículos eléctricos (VE) está transformando el panorama de la movilidad en todo el mundo, y Colombia no es la excepción. Con el aumento de la adopción de VE, surge la necesidad de infraestructura de carga accesible y conveniente. Una de las áreas clave en este desarrollo es la instalación de estaciones de carga dentro de unidades residenciales. Este artículo explora cómo se están implementando estas estaciones en Colombia, qué deben saber los administradores de conjuntos residenciales y las oportunidades que se presentan.
 
