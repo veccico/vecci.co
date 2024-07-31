@@ -6,8 +6,14 @@ class BlogController {
     }
 
     loadBlog = () => {
-        let rootPath = ''
-        this.loadPost(`${rootPath}/blog/posts/posts.json`, async (jsonString) => {
+        let rootPath = '/'
+        if(location.origin == 'file://') {
+            rootPath = 'https://raw.githubusercontent.com/veccico/vecci.co/master/'
+        }
+        const homeJson = `${rootPath}blog/posts/posts.json`
+
+        this.loadPost(homeJson, async (jsonString) => {
+            console.log('k>> ', jsonString)
             const json = JSON.parse(jsonString)
             document.querySelector('#content').innerHTML = `
                 ${marked(json.md_start)}
@@ -38,7 +44,7 @@ class BlogController {
 
         if(!article) article = 'error'
         let rootPath = ''
-        rootPath = location.hostname == 'localhost' ? '' : 'https://raw.githubusercontent.com/cjortegon/vecci.co/master'
+        rootPath = location.hostname == 'localhost' ? '' : 'https://raw.githubusercontent.com/veccico/vecci.co/master'
         let mdPath = `${rootPath}/blog/posts/${article}.md`
 
         // const articleName = ''
