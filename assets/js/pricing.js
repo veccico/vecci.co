@@ -1,16 +1,33 @@
-function mostra_btn0(){                   
-}
-function mostra_btn01(){  
- mostra_btn2();                 
+/* Buttons */
+async function cotizar_btn(ev) {
+   for(m of activeModules) {
+      logEvent('w_pricing_actbtn_' + m)
+   }
 }
 
-function mostra_btn2(){
-  var btn_Addons_8 = document.getElementById("btn_Addons_8");
-  if (btn_Addons_8.style.display === "none") {
-    btn_Addons_8.style.display = "block";
-  } else {
-    btn_Addons_8.style.display = "none";
-  }  
+/* Analytics */
+var _f_analytics = null
+function initAnalytics() {
+   const firebaseConfig = {
+      apiKey: "AIzaSyAi96LiS3P-4TNfa3tmqmFO7oy5Bj7MVDw",
+      authDomain: "veccico.firebaseapp.com",
+      databaseURL: "https://veccico-default-rtdb.firebaseio.com",
+      projectId: "veccico",
+      storageBucket: "veccico.appspot.com",
+      messagingSenderId: "1000951746381",
+      appId: "1:1000951746381:web:3fa145f6a6a70ffddeb104",
+      measurementId: "G-1RW98VBJKG"
+   }
+    
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+   // Initialize Firebase Analytics
+   _f_analytics = firebase.analytics()
+}
+
+function logEvent(event) {
+   console.log('[Analytics]', event)
+   _f_analytics.logEvent(event, {})
 }
 
 function showDiscount (num_modules, totalPrice) {
@@ -115,8 +132,7 @@ function CalculateFactorAdelantos(number_collaborators) {
 
 var totalResidences = 80
 var isAnnually = true //basicActive
-var activeModules = ['intercom']
-const paidModules = ['intercom','invoices','news','visits','pqrs']
+var activeModules = []
 var totalPaid = 1
 
 let RESIDENCE_PRICE = 2300
@@ -135,16 +151,14 @@ function onChangeUnits() {
     calculatePrice()
 }
 function onToggleModule(e) {
-   return
    const mod = e.target.id
+   console.log({mod})
    const input = document.querySelector('#'+mod)
    if(input.checked) {
       activeModules.push(mod)
    } else {
       activeModules = activeModules.filter(m => m != mod)
    }
-   totalPaid = activeModules.filter(m => paidModules.indexOf(m) != -1).length
-   calculatePrice()
 }
 
 function calculatePrice() {
