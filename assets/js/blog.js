@@ -270,22 +270,23 @@ function addIds() {
 
 function setTitle() {
     let title = document.getElementById('title')
-    if(title != null)
+    if(title != null) {
         document.title = 'Vecci - '+title.innerHTML
+    }
 }
 
-const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function formatedDate(date) {
-    const d = new Date(date)
-    if(`${d.getTime()}` == 'NaN') return ''
-    return `${monthNames[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
+    console.log('date', date)
+    let p = date.split('-')
+    if(p[1].startsWith('0')) p[1] = p[1].substring(1, p[1].length)
+    if(p.length != 3) return p.join('-')
+    return `${monthNames[p[1]-1]} ${p[2]}, ${p[0]}`
 }
 
 function insertAuthor(author) {
     let node = document.getElementById('title');
-    if(node != null)
+    if(node != null) {
         node.insertAdjacentHTML('afterend', `<div class="profile">
             ${author.img ? `<div class="pp-container">
                 <img src="${author.img}" />
@@ -295,6 +296,7 @@ function insertAuthor(author) {
                 <span class="date">${formatedDate(author.date)}</span>
             </div>
         </div>`);
+    }
 }
 
 function setupGist() {
