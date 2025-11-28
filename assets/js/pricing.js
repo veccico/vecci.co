@@ -180,7 +180,7 @@ function calculatePrice() {
    // }
    // console.log({hasModules, totalPaid, isAnnually, price})
 
-   let price = 840000
+   let price = 960000
    let monthPrice = price / 12.0
    resultado.innerHTML = `$${numberWithCommas(Math.ceil(monthPrice))}`
    resultadoSmall.innerHTML = `<p>$${numberWithCommas(Math.ceil(monthPrice/Math.max(totalResidences, 1)))} COP por casa al mes</p>`
